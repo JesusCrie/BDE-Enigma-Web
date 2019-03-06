@@ -1,17 +1,3 @@
-/* // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
-@import 'variables';
-
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
-
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-} */
-
 .tr-all {
   transition: all 200ms ease;
 }
@@ -6212,6 +6198,141 @@ table {
  * @import "utilities/skew-transforms";
  */
 
+.container-links {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: .75rem;
+  margin-top: .5rem;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 9999px;
+  border-width: 2px;
+  text-transform: none;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+  transition: border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
+}
+
+.btn.blue {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 9999px;
+  border-width: 2px;
+  text-transform: none;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+  transition: border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
+  border-color: #3490dc;
+  background-color: #fff;
+  color: #3490dc;
+}
+
+.btn.blue:hover,
+.btn.blue:active {
+  background-color: #3490dc;
+  color: #fff;
+}
+
+.btn.blue-dark {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 9999px;
+  border-width: 2px;
+  text-transform: none;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+  transition: border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
+  border-color: #3490dc;
+  background-color: #3490dc;
+  color: #fff;
+}
+
+.btn.blue-dark:hover,
+.btn.blue-dark:active {
+  border-color: #1c3d5a;
+  background-color: #1c3d5a;
+}
+
+.btn.red {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 9999px;
+  border-width: 2px;
+  text-transform: none;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+  transition: border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
+  border-color: #e3342f;
+  color: #e3342f;
+}
+
+.btn.red:hover,
+.btn.red:active {
+  background-color: #e3342f;
+  color: #fff;
+}
+
+.copyright {
+  bottom: 0;
+  margin-left: .75rem;
+  margin-right: .75rem;
+  margin-top: .75rem;
+  margin-bottom: .75rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: .875rem;
+  color: #b8c2cc;
+}
+
+.home-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 8rem;
+}
+
+@media (min-width: 992px) {
+  .home-container {
+    width: 33.33333%;
+  }
+}
+
+.input-text-big {
+  width: 100%;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  border-bottom-width: 2px;
+  line-height: 2;
+  font-size: 1.25rem;
+  border-color: #b8c2cc;
+  color: #606f7b;
+  outline: 0;
+  transition: border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
+}
+
+.input-text-big:hover,
+.input-text-big:hover {
+  border-color: #3490dc;
+}
+
 .btn-hover-blue {
   padding-top: .25rem;
   padding-bottom: .25rem;
@@ -6227,7 +6348,7 @@ table {
   transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
 }
 
-.btn-hover-blue::hover {
+.btn-hover-blue :hover {
   border-color: #3490dc;
   background-color: #3490dc;
   color: #fff;
@@ -6250,7 +6371,7 @@ table {
   transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
 }
 
-.btn-hover-red::hover {
+.btn-hover-red :hover {
   border-color: #e3342f;
   background-color: #e3342f;
   color: #fff;
@@ -6278,7 +6399,7 @@ table {
   transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
 }
 
-.btn-hover-login::hover {
+.btn-hover-login :hover {
   border-color: #3490dc;
   background-color: #3490dc;
   color: #fff;
@@ -6295,8 +6416,8 @@ table {
   transition: border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
 }
 
-.inp-code::hover,
-.inp-code::focus {
+.inp-code :hover,
+.inp-code :focus {
   border-color: #3490dc;
 }
 
@@ -6313,7 +6434,7 @@ table {
   transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
 }
 
-.inp-submit::hover {
+.inp-submit :hover {
   border-color: #3490dc;
   background-color: #3490dc;
   color: #fff;
