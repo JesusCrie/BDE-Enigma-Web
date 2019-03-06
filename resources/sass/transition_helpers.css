@@ -1,0 +1,15 @@
+.tr-all {
+    transition: all 200ms ease;
+}
+
+.tr-c-eio {
+    transition: color 200ms ease-in-out,
+    background-color 200ms ease-in-out;
+}
+
+.tr-bc-eio {
+    transition: border-top-color 200ms ease-in-out,
+    border-bottom-color 200ms ease-in-out,
+    border-left-color 200ms ease-in-out,
+    border-right-color 200ms ease-in-out;
+}
