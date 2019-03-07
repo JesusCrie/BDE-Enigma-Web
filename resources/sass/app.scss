@@ -39,6 +39,12 @@
  * @import "components/forms";
  */
 
+@import "components/alerts";
+@import "components/buttons";
+@import "components/containers";
+@import "components/forms";
+@import "components/pills";
+
 /**
  * This injects all of Tailwind's utility classes, generated based on your
  * config file.
@@ -64,135 +70,21 @@
  * @import "utilities/skew-transforms";
  */
 
-.container-screen-center {
-    @apply flex items-center h-screen;
-}
+.material-icons {
+    font-size: 18px !important;
+    font-weight: bold !important;
 
-// Corner buttons container
-.container-links {
-    @apply absolute pin-t pin-r mr-3 mt-2 inline-flex justify-between;
-}
+    @responsive {
+        &.hidden {
+            display: none !important;
+        }
 
-.container-home {
-    @apply w-5/6 mx-auto pb-32;
-
-    @screen lg {
-        @apply w-1/3;
-    }
-}
-
-.container-large {
-    @apply w-5/6 mx-auto;
-
-    @screen lg {
-        @apply w-3/5;
-    }
-}
-
-.container-auto-wrap {
-    @apply flex flex-wrap;
-
-    @screen lg {
-        @apply flex-no-wrap;
-    }
-}
-
-.btn {
-    @apply py-2 px-4 rounded-full border-2 normal-case font-semibold no-underline cursor-pointer tr-c-bc-eio;
-
-    &.blue {
-        @apply btn border-blue bg-white text-blue;
-
-        &:hover, &:active {
-            @apply bg-blue text-white;
+        &.block {
+            display: block !important;
         }
     }
-
-    &.blue-dark {
-        @apply btn border-blue bg-blue text-white;
-
-        &:hover, &:active {
-            @apply border-blue-dark bg-blue-dark;
-        }
-    }
-
-    &.green-dark {
-        @apply btn border-green bg-green text-white;
-
-        &:hover, &:active {
-            @apply border-green-dark bg-green-dark;
-        }
-    }
-
-    &.red {
-        @apply btn border-red text-red;
-
-        &:hover, &:active {
-            @apply bg-red text-white;
-        }
-    }
-}
-
-.copyright {
-    @apply pin-b mx-3 my-3 text-center font-semibold text-sm text-grey;
 }
 
 .big-title {
     @apply text-center text-2xl;
-}
-
-.input-text {
-    @apply w-full px-3 border-b-2 leading-loose outline-none tr-bc-eio;
-
-    &.big {
-        @apply text-xl;
-    }
-
-    &.blue {
-        @apply border-grey text-grey-darker;
-
-        &:hover, &:focus {
-            @apply border-blue;
-        }
-    }
-
-    &.red {
-        @apply border-red text-red;
-    }
-}
-
-.pill {
-    @apply px-3 py-1 rounded-full border-2 font-bold;
-
-    &.blue-outer {
-        @apply border-blue bg-white text-blue;
-    }
-
-    &.black-outer {
-        @apply border-black bg-white text-black;
-    }
-
-    &.green {
-        @apply border-green bg-green text-white;
-    }
-
-    &.yellow {
-        @apply border-yellow bg-yellow text-grey-darker;
-    }
-
-    &.orange {
-        @apply border-orange bg-orange text-white;
-    }
-
-    &.red {
-        @apply border-red bg-red text-white;
-    }
-
-    &.purple {
-        @apply border-purple bg-purple text-white;
-    }
-}
-
-.separator {
-    @apply my-4 border-b-2 border-grey;
 }

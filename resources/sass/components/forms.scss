@@ -1,0 +1,19 @@
+.input-text {
+    @apply w-full px-3 border-b-2 leading-loose outline-none tr-bc-eio;
+
+    &.big {
+        @apply text-xl;
+    }
+
+    &.blue {
+        @apply border-grey text-grey-darker;
+
+        &:hover, &:focus {
+            @apply border-blue;
+        }
+    }
+
+    &.red {
+        @apply border-red text-red;
+    }
+}

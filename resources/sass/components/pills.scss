@@ -1,0 +1,31 @@
+.pill {
+    @apply px-3 py-1 rounded-full border-2 font-bold;
+
+    &.blue-outer {
+        @apply border-blue bg-white text-blue;
+    }
+
+    &.black-outer {
+        @apply border-black bg-white text-black;
+    }
+
+    &.green {
+        @apply border-green bg-green text-white;
+    }
+
+    &.yellow {
+        @apply border-yellow bg-yellow text-grey-darker;
+    }
+
+    &.orange {
+        @apply border-orange bg-orange text-white;
+    }
+
+    &.red {
+        @apply border-red bg-red text-white;
+    }
+
+    &.purple {
+        @apply border-purple bg-purple text-white;
+    }
+}

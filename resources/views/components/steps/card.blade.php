@@ -5,7 +5,7 @@
     <div class="flex justify-end">
         @if ($finished)
             <button class="btn blue-dark">
-                Refaire
+                Revoir
             </button>
         @else
             <button class="btn green-dark">

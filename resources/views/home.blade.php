@@ -10,11 +10,23 @@
             </div>
 
             <!-- Challenge Submission -->
-            <form action="TODO" method="post" class="container-auto-wrap">
+            <form action="{{ route('enigma.unlock') }}" method="get" class="flex flex-no-wrap">
                 @csrf
-                <input type="text" placeholder="Enter challenge code here" class="input-text big blue" required autofocus>
-                <input type="submit" value="Submit" class="btn blue-dark w-full lg:w-auto mt-4 lg:mt-0 lg:ml-4">
+                <input id="code" type="text" name="code" placeholder="Entrez un code" value="{{ old('code') }}"
+                       class="input-text big {{ $errors->has('code') ? 'red' : 'blue' }}" required autofocus>
+
+                <button type="submit" class="container-flex-center btn blue-dark ml-4">
+                    <i class="material-icons">arrow_forward</i>
+                </button>
+
             </form>
+
+            @if ($errors->has('code'))
+                <br>
+                <label for="code" class="text-red">
+                    {{ $errors->first('code') }}
+                </label>
+            @endif
         </div>
     </div>
 @endsection

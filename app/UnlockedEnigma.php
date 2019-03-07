@@ -9,6 +9,11 @@ class UnlockedEnigma extends Model {
     protected $primaryKey = 'enigma_id';
     public $incrementing = false;
 
+    protected $fillable = [
+        'enigma_id',
+        'user_id'
+    ];
+
     /**
      * Get the unlocked enigma.
      */

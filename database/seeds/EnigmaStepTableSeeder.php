@@ -17,7 +17,7 @@ class EnigmaStepTableSeeder extends Seeder {
             'step' => 1,
             'name' => 'Step 1',
             'content' => 'Whats the result of 1+1 ?',
-            'answer_pattern' => '^2$'
+            'answer_pattern' => '/^2$/'
         ]);
 
         DB::table('enigma_steps')->insert([
@@ -25,7 +25,7 @@ class EnigmaStepTableSeeder extends Seeder {
             'step' => 2,
             'name' => 'Step 2',
             'content' => 'Whats the result of 2+2 ?',
-            'answer_pattern' => '^4$'
+            'answer_pattern' => '/^4$/'
         ]);
 
         DB::table('enigma_steps')->insert([
@@ -33,7 +33,7 @@ class EnigmaStepTableSeeder extends Seeder {
             'step' => 3,
             'name' => 'Step 3',
             'content' => '!!components.steps.demo_step',
-            'answer_pattern' => '^8$'
+            'answer_pattern' => '/^8$/'
         ]);
 
         DB::table('enigma_steps')->insert([
@@ -41,7 +41,7 @@ class EnigmaStepTableSeeder extends Seeder {
             'step' => 1,
             'name' => 'Hello there',
             'content' => 'Tell me something',
-            'answer_pattern' => '.*'
+            'answer_pattern' => '/.*/'
         ]);
     }
 }

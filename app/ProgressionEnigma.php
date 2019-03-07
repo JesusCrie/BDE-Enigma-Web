@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProgressionEnigma extends Model {
 
+    protected $fillable = [
+        'enigma_step_id',
+        'user_id'
+    ];
+
     /**
      * Get the step of the enigma that has been completed.
      */

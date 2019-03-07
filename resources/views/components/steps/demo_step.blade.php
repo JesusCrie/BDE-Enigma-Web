@@ -1,2 +1,2 @@
 
-<h1>Whats the result of 2 &times; 2 ?</h1>
+<h1>Whats the result of 2 &times; 4 ?</h1>

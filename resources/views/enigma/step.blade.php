@@ -35,7 +35,7 @@
 
                 @if ($errors->has('solution'))
                     <label for="solution" class="text-red float-right mt-2">
-                        {{ $errors->first('solution') }}
+                        Mauvaise r&eacute;ponse !
                     </label>
                 @endif
 
@@ -43,6 +43,11 @@
 
                 <input type="submit" name="Valider" class="btn blue-dark">
             </form>
+        @else
+            <p class="alert blue">
+                Vous avez d&eacute;j&agrave; compl&eacute;t&eacute; cette &eacute;tape !
+                <a href="{{ route('enigma.show', [$enigma->id]) }}">Revenir</a>
+            </p>
         @endunless
 
     </div>

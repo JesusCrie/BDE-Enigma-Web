@@ -1,0 +1,43 @@
+.container-screen-center {
+    @apply flex items-center h-screen;
+}
+
+.container-links {
+    @apply absolute pin-t pin-r mr-3 mt-2 inline-flex justify-between;
+}
+
+.container-home {
+    @apply w-5/6 mx-auto pb-32;
+
+    @screen lg {
+        @apply w-1/3;
+    }
+}
+
+.container-large {
+    @apply w-5/6 mx-auto;
+
+    @screen lg {
+        @apply w-3/5;
+    }
+}
+
+.container-auto-wrap {
+    @apply flex flex-wrap;
+
+    @screen lg {
+        @apply flex-no-wrap;
+    }
+}
+
+.container-flex-center {
+    @apply flex items-center justify-between;
+}
+
+.copyright {
+    @apply pin-b mx-3 my-3 text-center font-semibold text-sm text-grey;
+}
+
+.separator {
+    @apply my-4 border-b-2 border-grey;
+}

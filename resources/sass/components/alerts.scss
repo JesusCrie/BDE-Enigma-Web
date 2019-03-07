@@ -1,0 +1,11 @@
+.alert {
+    @apply p-4 rounded-lg border-2 font-semibold normal-case;
+
+    &.red {
+        @apply border-red-dark bg-red-lighter;
+    }
+
+    &.blue {
+        @apply border-blue-dark bg-blue-lighter;
+    }
+}

@@ -21,4 +21,13 @@ class EnigmaStep extends Model {
     public function completedBy() {
         return $this->hasMany('App\ProgressionEnigma');
     }
+
+    /**
+     * Check if a user has completed this step.
+     */
+    public function completedByUser(User $user) {
+        return $this->completedBy()
+            ->where('user_id', $user->id)
+            ->count() == 1;
+    }
 }

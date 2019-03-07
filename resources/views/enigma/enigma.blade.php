@@ -12,8 +12,9 @@
 
         <!-- Statistics -->
         <div class="flex flex-wrap text-sm">
-            <span class="m-1 pill green">
-                Responsable: {{ $enigma->owner }}
+            <span class="container-flex-center pill green m-1">
+                <i class="material-icons lg:mr-1">person</i>
+                <span class="capitalize">Responsable: {{ $enigma->owner }}</span>
             </span>
 
             <span class="m-1 pill {{ $diffColor }}">
@@ -21,11 +22,11 @@
             </span>
 
             <span class="m-1 pill black-outer">
-                Etapes: 5
+                Etapes: {{ $stepsCount }}
             </span>
 
             <span class="m-1 pill blue-outer">
-                Compl&eacute;t&eacute; 0 fois
+                Compl&eacute;t&eacute; par {{ count($enigma->completedBy()) }} personnes
             </span>
         </div>
 
@@ -39,8 +40,8 @@
         <!-- Steps -->
         <h2 class="mt-16 lg:mt-32 text-3xl">
             Etapes
-            <span class="ml-1 pill green text-xl">
-                2/5
+            <span class="ml-1 pill {{ $completed ? 'green' : 'blue-outer' }} text-xl">
+                {{ $completed ? $stepsCount : count($steps) - 1 }}/{{ $stepsCount }}
             </span>
         </h2>
 
@@ -50,7 +51,7 @@
 
             @foreach ($steps as $step)
                 <div class="w-full lg:w-1/3 p-2">
-                    @component('components.steps.card', ['enigma' => $enigma, 'step' => $step, 'finished' => !$loop->last])
+                    @component('components.steps.card', ['enigma' => $enigma, 'step' => $step, 'finished' => !$loop->last || $completed])
                         @slot('name')
                             {{ $step->name }}
                         @endslot

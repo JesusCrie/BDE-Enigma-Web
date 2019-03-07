@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder {
+
     /**
      * Seed the application's database.
      *
@@ -13,6 +14,8 @@ class DatabaseSeeder extends Seeder {
 
         $this->call(EnigmaTableSeeder::class);
         $this->call(EnigmaStepTableSeeder::class);
+        $this->call(UnlockerTableSeeder::class);
+
         //$this->call(UnlockedEnigmaTableSeeder::class);
     }
 }
