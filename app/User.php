@@ -34,4 +34,25 @@ class User extends Authenticatable {
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the enigmas unlocked by this user.
+     */
+    public function unlockedEnigmas() {
+        return $this->hasMany('App\UnlockedEnigma');
+    }
+
+    /**
+     * Get the enigmas owned by this user.
+     */
+    public function ownedEnigma() {
+        return $this->hasMany('App\Enigma');
+    }
+
+    /**
+     * Get the steps completed by this user.
+     */
+    public function completedSteps() {
+        return $this->hasMany('App\ProgressionEnigma');
+    }
 }

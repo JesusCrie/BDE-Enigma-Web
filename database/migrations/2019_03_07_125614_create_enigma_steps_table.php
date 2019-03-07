@@ -14,13 +14,14 @@ class CreateEnigmaStepsTable extends Migration
     public function up()
     {
         Schema::create('enigma_steps', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->bigInteger('enigma_id')->unsigned();
             $table->integer('step');
             $table->string('name');
             $table->text('content')->nullable();
             $table->string('answer_pattern');
 
-            $table->primary(['enigma_id', 'step']);
+            $table->unique(['enigma_id', 'step']);
             $table->foreign('enigma_id')
                 ->references('id')->on('enigmas')
                 ->onDelete('cascade');

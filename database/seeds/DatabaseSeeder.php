@@ -13,7 +13,6 @@ class DatabaseSeeder extends Seeder {
 
         $this->call(EnigmaTableSeeder::class);
         $this->call(EnigmaStepTableSeeder::class);
-
-        $this->call(UnlockedEnigmaTableSeeder::class);
+        //$this->call(UnlockedEnigmaTableSeeder::class);
     }
 }

@@ -16,7 +16,7 @@ class Enigma extends Model {
      * Get the owner of this enigma
      */
     public function owner() {
-        return $this->hasOne('App\User');
+        return $this->belongsTo('App\User');
     }
 
     /**

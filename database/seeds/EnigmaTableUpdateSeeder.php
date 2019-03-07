@@ -3,16 +3,15 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class UnlockedEnigmaTableSeeder extends Seeder
-{
+class EnigmaTableUpdateSeeder extends Seeder {
+
     /**
      * Run the database seeds.
      *
      * @return void
      */
     public function run() {
-        DB::table('unlocked_enigmas')->insert([
-            'enigma_id' => 1,
+        DB::table('enigmas')->update([
             'user_id' => 1
         ]);
     }

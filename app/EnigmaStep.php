@@ -14,4 +14,11 @@ class EnigmaStep extends Model {
     public function enigma() {
         return $this->belongsTo('App\Enigma');
     }
+
+    /**
+     * Get the users who have completed this step.
+     */
+    public function completedBy() {
+        return $this->hasMany('App\ProgressionEnigma');
+    }
 }

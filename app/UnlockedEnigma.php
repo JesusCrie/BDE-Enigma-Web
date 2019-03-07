@@ -15,4 +15,11 @@ class UnlockedEnigma extends Model {
     public function enigma() {
         return $this->belongsTo('App\Enigma');
     }
+
+    /**
+     * Get the user who have unlocked the enigma.
+     */
+    public function user() {
+        return $this->belongsTo('App\User');
+    }
 }

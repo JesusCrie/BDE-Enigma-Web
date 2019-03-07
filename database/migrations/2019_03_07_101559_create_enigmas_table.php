@@ -15,8 +15,7 @@ class CreateEnigmasTable extends Migration
     {
         Schema::create('enigmas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('user_id')->unsigned()
-                ->unique()->nullable();
+            $table->bigInteger('user_id')->unsigned()->nullable();
             $table->string('name');
             $table->text('description');
             $table->string('owner');
