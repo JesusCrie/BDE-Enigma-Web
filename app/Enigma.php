@@ -19,8 +19,11 @@ class Enigma extends Model {
         return $this->hasOne('App\User');
     }
 
+    /**
+     * Check if enigma is in the unlocked table.
+     */
     public function unlocked() {
-        return $this->hasOne('App\Unlocked');
+        return $this->hasOne('App\UnlockedEnigma');
     }
 
     public function step($id) {

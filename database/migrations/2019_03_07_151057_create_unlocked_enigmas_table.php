@@ -13,7 +13,7 @@ class CreateUnlockedsTable extends Migration
      */
     public function up()
     {
-        Schema::create('unlockeds', function (Blueprint $table) {
+        Schema::create('unlocked_enigmas', function (Blueprint $table) {
             $table->bigInteger('enigma_id')->unsigned()->primary();
             $table->timestamps();
 
@@ -30,6 +30,6 @@ class CreateUnlockedsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('unlockeds');
+        Schema::dropIfExists('unlocked_enigmas');
     }
 }

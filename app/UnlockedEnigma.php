@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Unlocked extends Model {
+class UnlockedEnigma extends Model {
 
     protected $primaryKey = 'enigma_id';
     public $incrementing = false;
