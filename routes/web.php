@@ -14,10 +14,20 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::middleware('auth')->group(function () {
+
+    Route::prefix('enigma')->group(function () {
+
+        Route::post('/', 'EnigmaController@unlock')->name('enigma.unlock');
+
+        Route::get('{id}', 'EnigmaController@show')->name('enigma.show');
+
+        Route::get('{id}/{step}', 'EnigmaController@step')->name('enigma.step');
+        Route::post('{id}/{step}', 'EnigmaController@completeStep')->name('enigma.step.confirm');
+
+    });
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

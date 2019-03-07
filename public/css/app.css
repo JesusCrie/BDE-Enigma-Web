@@ -10,6 +10,10 @@
   transition: border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
 }
 
+.tr-c-bc-eio {
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out, border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
+}
+
 /**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
@@ -6198,6 +6202,12 @@ table {
  * @import "utilities/skew-transforms";
  */
 
+.container-screen-center {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
 .container-links {
   position: absolute;
   top: 0;
@@ -6206,6 +6216,42 @@ table {
   margin-top: .5rem;
   display: inline-flex;
   justify-content: space-between;
+}
+
+.container-home {
+  width: 83.33333%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 8rem;
+}
+
+@media (min-width: 992px) {
+  .container-home {
+    width: 33.33333%;
+  }
+}
+
+.container-large {
+  width: 83.33333%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 992px) {
+  .container-large {
+    width: 60%;
+  }
+}
+
+.container-auto-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 992px) {
+  .container-auto-wrap {
+    flex-wrap: nowrap;
+  }
 }
 
 .btn {
@@ -6218,8 +6264,8 @@ table {
   text-transform: none;
   font-weight: 600;
   text-decoration: none;
-  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
-  transition: border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
+  cursor: pointer;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out, border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
 }
 
 .btn.blue {
@@ -6232,8 +6278,8 @@ table {
   text-transform: none;
   font-weight: 600;
   text-decoration: none;
-  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
-  transition: border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
+  cursor: pointer;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out, border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
   border-color: #3490dc;
   background-color: #fff;
   color: #3490dc;
@@ -6255,8 +6301,8 @@ table {
   text-transform: none;
   font-weight: 600;
   text-decoration: none;
-  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
-  transition: border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
+  cursor: pointer;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out, border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
   border-color: #3490dc;
   background-color: #3490dc;
   color: #fff;
@@ -6264,8 +6310,31 @@ table {
 
 .btn.blue-dark:hover,
 .btn.blue-dark:active {
-  border-color: #1c3d5a;
-  background-color: #1c3d5a;
+  border-color: #2779bd;
+  background-color: #2779bd;
+}
+
+.btn.green-dark {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 9999px;
+  border-width: 2px;
+  text-transform: none;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out, border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
+  border-color: #38c172;
+  background-color: #38c172;
+  color: #fff;
+}
+
+.btn.green-dark:hover,
+.btn.green-dark:active {
+  border-color: #1f9d55;
+  background-color: #1f9d55;
 }
 
 .btn.red {
@@ -6278,8 +6347,8 @@ table {
   text-transform: none;
   font-weight: 600;
   text-decoration: none;
-  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
-  transition: border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
+  cursor: pointer;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out, border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
   border-color: #e3342f;
   color: #e3342f;
 }
@@ -6302,142 +6371,97 @@ table {
   color: #b8c2cc;
 }
 
-.home-container {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 8rem;
+.big-title {
+  text-align: center;
+  font-size: 1.5rem;
 }
 
-@media (min-width: 992px) {
-  .home-container {
-    width: 33.33333%;
-  }
-}
-
-.input-text-big {
+.input-text {
   width: 100%;
   padding-left: .75rem;
   padding-right: .75rem;
   border-bottom-width: 2px;
   line-height: 2;
-  font-size: 1.25rem;
-  border-color: #b8c2cc;
-  color: #606f7b;
   outline: 0;
   transition: border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
 }
 
-.input-text-big:hover,
-.input-text-big:hover {
+.input-text.big {
+  font-size: 1.25rem;
+}
+
+.input-text.blue {
+  border-color: #b8c2cc;
+  color: #606f7b;
+}
+
+.input-text.blue:hover,
+.input-text.blue:focus {
   border-color: #3490dc;
 }
 
-.btn-hover-blue {
+.input-text.red {
+  border-color: #e3342f;
+  color: #e3342f;
+}
+
+.pill {
+  padding-left: .75rem;
+  padding-right: .75rem;
   padding-top: .25rem;
   padding-bottom: .25rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
   border-radius: 9999px;
   border-width: 2px;
-  border-color: #606f7b;
-  color: #606f7b;
-  font-size: .875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+  font-weight: 700;
 }
 
-.btn-hover-blue :hover {
+.pill.blue-outer {
   border-color: #3490dc;
-  background-color: #3490dc;
+  background-color: #fff;
+  color: #3490dc;
+}
+
+.pill.black-outer {
+  border-color: #22292f;
+  background-color: #fff;
+  color: #22292f;
+}
+
+.pill.green {
+  border-color: #38c172;
+  background-color: #38c172;
   color: #fff;
 }
 
-.btn-hover-red {
-  padding-top: .25rem;
-  padding-bottom: .25rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-radius: 9999px;
-  border-width: 2px;
-  border-color: #606f7b;
+.pill.yellow {
+  border-color: #ffed4a;
+  background-color: #ffed4a;
   color: #606f7b;
-  font-size: .875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none;
-  line-height: 2;
-  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
 }
 
-.btn-hover-red :hover {
+.pill.orange {
+  border-color: #f6993f;
+  background-color: #f6993f;
+  color: #fff;
+}
+
+.pill.red {
   border-color: #e3342f;
   background-color: #e3342f;
   color: #fff;
 }
 
-.btn-hover-login {
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding-top: .25rem;
-  padding-bottom: .25rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-top: .75rem;
-  margin-right: 1.25rem;
-  border-radius: 9999px;
-  border-width: 2px;
-  border-color: #606f7b;
-  color: #606f7b;
-  font-size: .875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none;
-  line-height: 2;
-  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
-}
-
-.btn-hover-login :hover {
-  border-color: #3490dc;
-  background-color: #3490dc;
+.pill.purple {
+  border-color: #9561e2;
+  background-color: #9561e2;
   color: #fff;
 }
 
-.inp-code {
-  width: 100%;
-  padding-left: .5rem;
-  padding-right: .5rem;
+.separator {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   border-bottom-width: 2px;
   border-color: #b8c2cc;
-  line-height: 2;
-  outline: 0;
-  transition: border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
-}
-
-.inp-code :hover,
-.inp-code :focus {
-  border-color: #3490dc;
-}
-
-.inp-submit {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-  border-radius: 9999px;
-  border-width: 2px;
-  border-color: #606f7b;
-  color: #606f7b;
-  cursor: pointer;
-  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
-}
-
-.inp-submit :hover {
-  border-color: #3490dc;
-  background-color: #3490dc;
-  color: #fff;
 }
 
 @media (min-width: 576px) {

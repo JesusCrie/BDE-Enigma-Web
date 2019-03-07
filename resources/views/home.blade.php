@@ -1,23 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+    <div class="container-screen-center">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
+        <div class="container-home">
+            <!-- Title -->
+            <div class="big-title mb-10 lg:mb-20">
+                <h1>BDE DDOS</h1>
             </div>
+
+            <!-- Challenge Submission -->
+            <form action="TODO" method="post" class="container-auto-wrap">
+                @csrf
+                <input type="text" placeholder="Enter challenge code here" class="input-text big blue" required autofocus>
+                <input type="submit" value="Submit" class="btn blue-dark w-full lg:w-auto mt-4 lg:mt-0 lg:ml-4">
+            </form>
         </div>
     </div>
-</div>
 @endsection

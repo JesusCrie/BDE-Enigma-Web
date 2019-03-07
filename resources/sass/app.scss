@@ -64,13 +64,41 @@
  * @import "utilities/skew-transforms";
  */
 
+.container-screen-center {
+    @apply flex items-center h-screen;
+}
+
 // Corner buttons container
 .container-links {
     @apply absolute pin-t pin-r mr-3 mt-2 inline-flex justify-between;
 }
 
+.container-home {
+    @apply w-5/6 mx-auto pb-32;
+
+    @screen lg {
+        @apply w-1/3;
+    }
+}
+
+.container-large {
+    @apply w-5/6 mx-auto;
+
+    @screen lg {
+        @apply w-3/5;
+    }
+}
+
+.container-auto-wrap {
+    @apply flex flex-wrap;
+
+    @screen lg {
+        @apply flex-no-wrap;
+    }
+}
+
 .btn {
-    @apply py-2 px-4 rounded-full border-2 normal-case font-semibold no-underline tr-c-eio tr-bc-eio;
+    @apply py-2 px-4 rounded-full border-2 normal-case font-semibold no-underline cursor-pointer tr-c-bc-eio;
 
     &.blue {
         @apply btn border-blue bg-white text-blue;
@@ -84,7 +112,15 @@
         @apply btn border-blue bg-blue text-white;
 
         &:hover, &:active {
-            @apply border-blue-darker bg-blue-darker;
+            @apply border-blue-dark bg-blue-dark;
+        }
+    }
+
+    &.green-dark {
+        @apply btn border-green bg-green text-white;
+
+        &:hover, &:active {
+            @apply border-green-dark bg-green-dark;
         }
     }
 
@@ -101,58 +137,62 @@
     @apply pin-b mx-3 my-3 text-center font-semibold text-sm text-grey;
 }
 
-.home-container {
-    @apply w-4/5 ml-auto mr-auto pb-32;
+.big-title {
+    @apply text-center text-2xl;
+}
 
-    @screen lg {
-        @apply w-1/3
+.input-text {
+    @apply w-full px-3 border-b-2 leading-loose outline-none tr-bc-eio;
+
+    &.big {
+        @apply text-xl;
+    }
+
+    &.blue {
+        @apply border-grey text-grey-darker;
+
+        &:hover, &:focus {
+            @apply border-blue;
+        }
+    }
+
+    &.red {
+        @apply border-red text-red;
     }
 }
 
-.input-text-big {
-    @apply w-full px-3 border-b-2 leading-loose text-xl border-grey text-grey-darker outline-none tr-bc-eio;
+.pill {
+    @apply px-3 py-1 rounded-full border-2 font-bold;
 
-    &:hover, &:hover {
-        @apply border-blue;
+    &.blue-outer {
+        @apply border-blue bg-white text-blue;
     }
-}
 
-.btn-hover-blue {
-	@apply py-1 px-4 rounded-full border-2 border-grey-darker text-grey-darker text-sm font-semibold uppercase tr-c-eio;
-
-    :hover {
-        @apply border-blue bg-blue text-white;
+    &.black-outer {
+        @apply border-black bg-white text-black;
     }
-}
 
-.btn-hover-red {
-	@apply py-1 px-4 rounded-full border-2 border-grey-darker text-grey-darker text-sm font-semibold uppercase no-underline leading-loose tr-c-eio;
+    &.green {
+        @apply border-green bg-green text-white;
+    }
 
-    :hover {
+    &.yellow {
+        @apply border-yellow bg-yellow text-grey-darker;
+    }
+
+    &.orange {
+        @apply border-orange bg-orange text-white;
+    }
+
+    &.red {
         @apply border-red bg-red text-white;
     }
-}
 
-.btn-hover-login {
-	@apply fixed pin-t pin-r py-1 px-4 mt-3 mr-5 rounded-full border-2 border-grey-darker text-grey-darker text-sm font-semibold uppercase no-underline leading-loose tr-c-eio;
-
-    :hover {
-        @apply border-blue bg-blue text-white;
+    &.purple {
+        @apply border-purple bg-purple text-white;
     }
 }
 
-.inp-code {
-	@apply w-full px-2 border-b-2 border-grey leading-loose outline-none tr-bc-eio;
-
-    :hover, :focus {
-        @apply border-blue;
-    }
-}
-
-.inp-submit {
-	@apply py-2 px-10 rounded-full border-2 border-grey-darker text-grey-darker cursor-pointer tr-c-eio;
-
-    :hover {
-        @apply border-blue bg-blue text-white;
-    }
+.separator {
+    @apply my-4 border-b-2 border-grey;
 }
