@@ -14,7 +14,7 @@
         <div class="flex flex-wrap text-sm">
             <span class="container-flex-center pill green m-1">
                 <i class="material-icons lg:mr-1">person</i>
-                <span class="capitalize">Responsable: {{ $enigma->owner }}</span>
+                <span class="capitalize">Responsable: {{ $owner }}</span>
             </span>
 
             <span class="m-1 pill {{ $diffColor }}">

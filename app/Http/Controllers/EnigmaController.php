@@ -20,7 +20,7 @@ class EnigmaController extends Controller {
      * @param $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id) {
+    public function show(int $id) {
         $enigma = Enigma::findOrFail($id);
 
         // Check if unlocked or throw 404.
@@ -31,6 +31,7 @@ class EnigmaController extends Controller {
 
         return view('enigma.enigma', [
             'enigma' => $enigma,
+            'owner' => $enigma->owner->name,
             'steps' => $userSteps,
             'stepsCount' => $stepsCount,
             'completed' => $enigma->completedByUser(Auth::user()),
@@ -45,23 +46,18 @@ class EnigmaController extends Controller {
      * @param $step
      * @return \Illuminate\Http\Response
      */
-    public function step($id, $step) {
+    public function step(int $id, int $step) {
         $enigma = Enigma::findOrFail($id);
 
         try {
             $stepReal = $enigma->step($step)
                 ->firstOrFail();
 
-            // Min step = 1
-            if ($step > 1) {
-                // Check if previous step was completed
-                if (!$enigma->step($step - 1)
-                    ->firstOrFail()
-                    ->completedByUser(Auth::user())) {
-
-                    return redirect()->route('enigma.show', ['id' => $id]);
-                }
+            // Check previous step
+            if (!$this->checkPreviousStepCompleted($enigma, $step)) {
+                return redirect()->route('enigma.show', ['id' => $id]);
             }
+
         } catch (ModelNotFoundException $e) {
             return redirect()->route('enigma.show', ['id' => $id]);
         }
@@ -118,9 +114,14 @@ class EnigmaController extends Controller {
      * @param $step
      * @return \Illuminate\Http\Response
      */
-    public function completeStep(Request $request, $id, $step) {
+    public function completeStep(Request $request, int $id, int $step) {
         $enigma = Enigma::findOrFail($id);
         $stepReal = $enigma->step($step)->firstOrFail();
+
+        // Check previous step
+        if (!$this->checkPreviousStepCompleted($enigma, $step)) {
+            return redirect()->route('enigma.show', ['id' => $id]);
+        }
 
         $validator = Validator::make($request->all(), [
             'solution' => [
@@ -144,6 +145,21 @@ class EnigmaController extends Controller {
 
             return redirect()->route('enigma.show', ['id' => $id]);
         }
+    }
+
+    private function checkPreviousStepCompleted(Enigma $enigma, int $step) {
+
+        // First step
+        if ($step == 1)
+            return true;
+
+        $prevStep = $enigma->step($step - 1);
+
+        if ($prevStep->exists()) {
+            return $prevStep->first()->completedByUser(Auth::user());
+        }
+
+        return false;
     }
 
     private function translateDifficultyToColor($diff) {

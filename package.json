@@ -1,7 +1,7 @@
 {
     "private": true,
     "scripts": {
-        "setup": "npm install && composer install && cp .env.example .env && php artisan key:generate && npm run db-reset && npm run development",
+        "setup": "npm install && composer install && cp .env.example .env && php artisan key:generate && npm run development",
         "db-reset": "php artisan migrate:refresh --seed",
         "db-postreset": "php artisan db:seed --class=UnlockedEnigmaTableSeeder && php artisan db:seed --class=ProgressionEnigmaTableSeeder && php artisan db:seed --class=EnigmaTableUpdateSeeder",
         "dev": "npm run development",

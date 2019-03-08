@@ -15,13 +15,12 @@ class CreateEnigmasTable extends Migration
     {
         Schema::create('enigmas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('user_id')->unsigned()->nullable();
+            $table->bigInteger('owner_id')->unsigned()->nullable();
             $table->string('name');
             $table->text('description');
-            $table->string('owner');
             $table->integer('difficulty');
 
-            $table->foreign('user_id')
+            $table->foreign('owner_id')
                 ->references('id')->on('users');
         });
     }

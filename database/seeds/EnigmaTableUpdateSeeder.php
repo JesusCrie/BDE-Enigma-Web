@@ -12,7 +12,7 @@ class EnigmaTableUpdateSeeder extends Seeder {
      */
     public function run() {
         DB::table('enigmas')->update([
-            'user_id' => 1
+            'owner_id' => 1
         ]);
     }
 }

@@ -15,14 +15,12 @@ class EnigmaTableSeeder extends Seeder {
         DB::table('enigmas')->insert([
             'name' => 'Test enigma',
             'description' => 'Some long description because its supposed to be the loooooong starting texte of the enigma with the storyline and shit',
-            'owner' => 'Lucas MALANDRINO',
             'difficulty' => 5
         ]);
 
         DB::table('enigmas')->insert([
             'name' => 'Text enigma with a long name',
             'description' => Str::random(120),
-            'owner' => 'Thomas VINCENT',
             'difficulty' => 2
         ]);
     }
