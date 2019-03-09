@@ -3,6 +3,7 @@
 /public/storage
 /storage/*.key
 /vendor
+/data
 .env
 .phpunit.result.cache
 Homestead.json
@@ -18,3 +19,5 @@ yarn-error.log
 .idea/php*
 .idea/sqldialects.xml
 .idea/workspace.xml
+.idea/deployment.xml
+.idea/webServers.xml
