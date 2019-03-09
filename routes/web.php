@@ -20,10 +20,7 @@ Route::middleware('auth')->group(function () {
 
     Route::prefix('enigma')->group(function () {
 
-        // Rate-limit 5/min
-        Route::middleware('throttle:5,1')->group(function () {
-            Route::get('/', 'EnigmaController@unlock')->name('enigma.unlock');
-        });
+        Route::get('/', 'EnigmaController@unlock')->name('enigma.unlock');
 
         Route::get('{id}', 'EnigmaController@show')->name('enigma.show');
 

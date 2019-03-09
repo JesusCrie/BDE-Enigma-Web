@@ -8,6 +8,10 @@ class Unlocker extends Model {
 
     public $timestamps = false;
 
+    protected $casts = [
+        'used' => 'boolean'
+    ];
+
     /**
      * Get the associated enigma.
      */

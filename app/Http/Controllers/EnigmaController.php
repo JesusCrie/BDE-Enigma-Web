@@ -9,6 +9,7 @@ use App\Unlocker;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\MessageBag;
 
@@ -79,31 +80,37 @@ class EnigmaController extends Controller {
             return redirect()->route('home');
         }
 
-        try {
+        $isKeyValid = DB::table('unlockers')
+            ->where([
+                ['code', $request->get('code')],
+                ['used', false]
+            ])
+            ->exists();
+
+        if ($isKeyValid) {
+
+            // Unlock enigma
             $unlocker = Unlocker::where('code', $request->get('code'))->firstOrFail();
-        } catch (ModelNotFoundException $e) {
+            $enigmaId = $unlocker->enigma->id;
+
+            $unlocked = new UnlockedEnigma([
+                'enigma_id' => $enigmaId,
+                'user_id' => Auth::id()
+            ]);
+            $unlocked->save();
+
+            // Set key to used
+            $unlocker->used = true;
+            $unlocker->save();
+
+            return redirect()->route('enigma.show', ['id' => $enigmaId]);
+
+        } else {
             $errors = new MessageBag();
-            $errors->add('code', 'Code invalide !');
+            $errors->add('code', 'Code invalide ou d&eacute;j&agrave; &eacute;xpir&eacute; !');
 
-            return back()->withInput()->withErrors($errors);
+            return redirect()->route('home')->withInput()->withErrors($errors);
         }
-
-        $enigmaId = $unlocker->enigma->id;
-
-        $unlocked = new UnlockedEnigma([
-            'enigma_id' => $enigmaId,
-            'user_id' => Auth::id()
-        ]);
-
-        if ($unlocked->exists()) {
-            $errors = new MessageBag();
-            $errors->add('code', 'Code d&eacute;j&agrave; utilis&eacute; !');
-            return back()->withErrors($errors);
-        }
-
-        $unlocked->save();
-
-        return redirect()->route('enigma.show', ['id' => $enigmaId]);
     }
 
     /**

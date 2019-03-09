@@ -24,7 +24,7 @@
             @if ($errors->has('code'))
                 <br>
                 <label for="code" class="text-red">
-                    {{ $errors->first('code') }}
+                    {!! $errors->first('code') !!}
                 </label>
             @endif
         </div>
