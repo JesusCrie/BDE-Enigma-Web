@@ -12,16 +12,18 @@ class EnigmaTableSeeder extends Seeder {
      * @return void
      */
     public function run() {
+
+        // line 767
         DB::table('enigmas')->insert([
-            'name' => 'Test enigma',
-            'description' => 'Some long description because its supposed to be the loooooong starting texte of the enigma with the storyline and shit',
-            'difficulty' => 5
+            'name' => 'Coordonnées perdues',
+            'description' => 'Nos services d\'informations ont réussi à intercepter un message indiquant l\'emplacement d\'un criminel très recherché. Malheuresement, nous ne savons pas comment exploiter ce message.',
+            'difficulty' => 2
         ]);
 
         DB::table('enigmas')->insert([
-            'name' => 'Text enigma with a long name',
-            'description' => Str::random(120),
-            'difficulty' => 2
+            'name' => 'Enigma 2',
+            'description' => 'bite lol',
+            'difficulty' => 1
         ]);
     }
 }

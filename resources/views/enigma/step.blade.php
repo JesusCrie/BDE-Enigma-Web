@@ -15,7 +15,7 @@
             @component(substr($step->content, 2), ['enigma' => $enigma, 'step' => $step, 'completed' => $completed])
             @endcomponent
         @else
-            <p class="text-lg text-grey-darker">
+            <p class="description">
                 {{ $step->content }}
             </p>
         @endif

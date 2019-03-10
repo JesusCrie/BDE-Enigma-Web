@@ -11,9 +11,9 @@ class UnlockedEnigmaTableSeeder extends Seeder
      * @return void
      */
     public function run() {
-        DB::table('unlocked_enigmas')->insert([
+        /*DB::table('unlocked_enigmas')->insert([
             'enigma_id' => 1,
             'user_id' => 1
-        ]);
+        ]);*/
     }
 }

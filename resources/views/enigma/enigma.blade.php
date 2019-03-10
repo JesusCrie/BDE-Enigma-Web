@@ -12,12 +12,13 @@
 
         <!-- Statistics -->
         <div class="flex flex-wrap text-sm">
-            <span class="container-center-hv pill green m-1">
-                <i class="material-icons lg:mr-1">person</i>
+            <span class="container-center-v pill green m-1">
+                <i class="material-icons">person</i>&nbsp;
                 <span class="capitalize">Responsable: {{ $owner }}</span>
             </span>
 
-            <span class="m-1 pill {{ $diffColor }}">
+            <span class="container-center-v m-1 pill {{ $diffColor }}">
+                <i class="material-icons">star</i>&nbsp;
                 Difficult&eacute;: {{ $enigma->difficulty }}
             </span>
 
@@ -33,7 +34,7 @@
         <br>
 
         <!-- Description -->
-        <p class="text-base text-grey-dark">
+        <p class="description">
             {{ $enigma->description }}
         </p>
 

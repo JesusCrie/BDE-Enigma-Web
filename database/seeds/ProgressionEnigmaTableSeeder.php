@@ -10,9 +10,9 @@ class ProgressionEnigmaTableSeeder extends Seeder {
      * @return void
      */
     public function run() {
-        DB::table('progression_enigmas')->insert([
+        /*DB::table('progression_enigmas')->insert([
             'enigma_step_id' => 1,
             'user_id' => 1
-        ]);
+        ]);*/
     }
 }

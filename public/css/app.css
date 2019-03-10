@@ -6575,6 +6575,11 @@ table {
   font-size: 1.5rem;
 }
 
+.description {
+  font-size: 1.125rem;
+  color: #3d4852;
+}
+
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;

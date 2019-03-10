@@ -2,6 +2,8 @@
      onclick="window.location = '{{ route('enigma.step', [$enigma->id, $step->step]) }}'">
     <h3>{{ $name }}</h3>
 
+    <br>
+
     <div class="flex justify-end">
         @if ($finished)
             <button class="btn blue-dark">
