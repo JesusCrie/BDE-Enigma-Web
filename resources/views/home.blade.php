@@ -11,7 +11,7 @@
 
             <!-- Challenge Submission -->
             <form action="{{ route('enigma.unlock') }}" method="get" class="flex flex-no-wrap">
-                @csrf
+
                 <input id="code" type="text" name="code" placeholder="Entrez un code" value="{{ old('code') }}"
                        class="input-text big {{ $errors->has('code') ? 'red' : 'blue' }}" required autofocus>
 
