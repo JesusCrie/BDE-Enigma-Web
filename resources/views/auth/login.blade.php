@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-screen-center">
 
-        <div class="container-home">
+        <div class="container-alone">
 
             <!-- Title -->
             <div class="big-title mb-10 lg:mb20">

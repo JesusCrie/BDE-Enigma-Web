@@ -1,8 +1,16 @@
 .pill {
     @apply px-3 py-1 rounded-full border-2 font-bold;
 
+    &.blue {
+        @apply border-blue bg-blue text-white;
+    }
+
     &.blue-outer {
         @apply border-blue bg-white text-blue;
+    }
+
+    &.black {
+        @apply border-black bg-black text-white;
     }
 
     &.black-outer {
@@ -14,7 +22,7 @@
     }
 
     &.yellow {
-        @apply border-yellow bg-yellow text-grey-darker;
+        @apply border-yellow bg-yellow text-black;
     }
 
     &.orange {

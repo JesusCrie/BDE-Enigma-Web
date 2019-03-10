@@ -5,6 +5,10 @@
         @apply border-red-dark bg-red-lighter;
     }
 
+    &.orange {
+        @apply border-orange-dark bg-orange-lighter;
+    }
+
     &.blue {
         @apply border-blue-dark bg-blue-lighter;
     }

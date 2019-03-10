@@ -5,6 +5,7 @@
 
         <!-- Title -->
         <h1 class="text-4xl">
+            <a href="{{ route('enigma.show', ['id' => $enigma->id]) }}"><i class="material-icons container-center-hv btn green-dark">arrow_back</i></a>
             {{ $enigma->name }} - {{ $step->name }}
         </h1>
 
@@ -46,7 +47,6 @@
         @else
             <p class="alert blue">
                 Vous avez d&eacute;j&agrave; compl&eacute;t&eacute; cette &eacute;tape !
-                <a href="{{ route('enigma.show', [$enigma->id]) }}">Revenir</a>
             </p>
         @endunless
 

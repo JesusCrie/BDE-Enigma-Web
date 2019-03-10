@@ -169,7 +169,7 @@ class EnigmaController extends Controller {
         return false;
     }
 
-    private function translateDifficultyToColor($diff) {
+    public static function translateDifficultyToColor($diff) {
         switch ($diff) {
             default:
             case 1:

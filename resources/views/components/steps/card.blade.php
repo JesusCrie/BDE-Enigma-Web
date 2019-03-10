@@ -1,4 +1,4 @@
-<div class="p-4 rounded-lg border-2 cursor-pointer border-grey hover:bg-grey-lighter tr-c-bc-eio"
+<div class="card hoverable"
      onclick="window.location = '{{ route('enigma.step', [$enigma->id, $step->step]) }}'">
     <h3>{{ $name }}</h3>
 

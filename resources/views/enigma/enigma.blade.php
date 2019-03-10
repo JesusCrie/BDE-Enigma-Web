@@ -12,7 +12,7 @@
 
         <!-- Statistics -->
         <div class="flex flex-wrap text-sm">
-            <span class="container-flex-center pill green m-1">
+            <span class="container-center-hv pill green m-1">
                 <i class="material-icons lg:mr-1">person</i>
                 <span class="capitalize">Responsable: {{ $owner }}</span>
             </span>
@@ -47,10 +47,10 @@
 
         <p class="separator"></p>
 
-        <div class="flex flex-wrap">
+        <div class="container-grid">
 
             @foreach ($steps as $step)
-                <div class="w-full lg:w-1/3 p-2">
+                <div class="container-row-3">
                     @component('components.steps.card', ['enigma' => $enigma, 'step' => $step, 'finished' => !$loop->last || $completed])
                         @slot('name')
                             {{ $step->name }}

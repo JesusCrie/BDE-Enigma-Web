@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-screen-center">
 
-        <div class="container-home">
+        <div class="container-alone">
 
             <!-- Title -->
             <div class="big-title mb-10 lg:mb20">
@@ -55,6 +55,14 @@
                        class="input-text blue" required>
 
                 <br><br>
+
+                <!-- Notice -->
+                <p class="alert orange">
+                    Ce site ne dispose pas de certificat SSL. Cela signifie que rien n'est encrypté entre votre navigateur
+                    et le serveur. N'utilisez pas votre mot de passe de tous les jours.
+                </p>
+
+                <br>
 
                 <!-- Submit -->
                 <input type="submit" value="Register" class="btn blue-dark w-full">

@@ -595,6 +595,11 @@ table {
   background-color: #f9acaa;
 }
 
+.alert.orange {
+  border-color: #de751f;
+  background-color: #fcd9b6;
+}
+
 .alert.blue {
   border-color: #2779bd;
   background-color: #bcdefa;
@@ -705,6 +710,23 @@ table {
   color: #fff;
 }
 
+.card {
+  padding: 1rem;
+  border-radius: .5rem;
+  border-width: 2px;
+  border-color: #b8c2cc;
+  background-color: #fff;
+}
+
+.card.hoverable {
+  cursor: pointer;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out, border-top-color 200ms ease-in-out, border-bottom-color 200ms ease-in-out, border-left-color 200ms ease-in-out, border-right-color 200ms ease-in-out;
+}
+
+.card.hoverable:hover {
+  background-color: #dae1e7;
+}
+
 .container-screen-center {
   display: flex;
   align-items: center;
@@ -721,16 +743,34 @@ table {
   justify-content: space-between;
 }
 
+.container-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-row-3 {
+  width: 100%;
+  padding: .5rem;
+}
+
+@media (min-width: 992px) {
+  .container-row-3 {
+    width: 33.33333%;
+  }
+}
+
 .container-home {
   width: 83.33333%;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 8rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 @media (min-width: 992px) {
   .container-home {
-    width: 33.33333%;
+    width: 60%;
+    margin-top: 8rem;
   }
 }
 
@@ -746,6 +786,30 @@ table {
   }
 }
 
+.container-small,
+.container-alone {
+  width: 83.33333%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 992px) {
+  .container-small,
+  .container-alone {
+    width: 33.33333%;
+  }
+}
+
+.container-center-v,
+.container-center-hv {
+  display: flex;
+  align-items: center;
+}
+
+.container-alone {
+  padding-bottom: 8rem;
+}
+
 .container-auto-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -757,9 +821,7 @@ table {
   }
 }
 
-.container-flex-center {
-  display: flex;
-  align-items: center;
+.container-center-hv {
   justify-content: space-between;
 }
 
@@ -821,10 +883,22 @@ table {
   font-weight: 700;
 }
 
+.pill.blue {
+  border-color: #3490dc;
+  background-color: #3490dc;
+  color: #fff;
+}
+
 .pill.blue-outer {
   border-color: #3490dc;
   background-color: #fff;
   color: #3490dc;
+}
+
+.pill.black {
+  border-color: #22292f;
+  background-color: #22292f;
+  color: #fff;
 }
 
 .pill.black-outer {
@@ -842,7 +916,7 @@ table {
 .pill.yellow {
   border-color: #ffed4a;
   background-color: #ffed4a;
-  color: #606f7b;
+  color: #22292f;
 }
 
 .pill.orange {

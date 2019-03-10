@@ -1,0 +1,11 @@
+.card {
+    @apply p-4 rounded-lg border-2 border-grey bg-white;
+
+    &.hoverable {
+        @apply cursor-pointer tr-c-bc-eio;
+
+        &:hover {
+            @apply bg-grey-light;
+        }
+    }
+}
