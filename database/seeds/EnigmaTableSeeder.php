@@ -21,9 +21,15 @@ class EnigmaTableSeeder extends Seeder {
         ]);
 
         DB::table('enigmas')->insert([
-            'name' => 'Enigma 2',
-            'description' => 'bite lol',
-            'difficulty' => 1
+            'name' => 'Keygen',
+            'description' => 'On a trouver une petite pile d\'executable vérouillés par un mot de passe, pouvez vous les crackés ?',
+            'difficulty' => 5
+        ]);
+
+        DB::table('enigmas')->insert([
+            'name' => 'Keygen (Bonus)',
+            'description' => 'Et bien si vous êtes arrivé la c\'est que vous n\'avez probablement pas de vie. Un dernier pour la route ?',
+            'difficutlty' => 5
         ]);
     }
 }

@@ -881,6 +881,7 @@ table {
   border-radius: 9999px;
   border-width: 2px;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .pill.blue {
