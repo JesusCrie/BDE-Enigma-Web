@@ -29,7 +29,7 @@ class EnigmaTableSeeder extends Seeder {
         DB::table('enigmas')->insert([
             'name' => 'Keygen (Bonus)',
             'description' => 'Et bien si vous êtes arrivé la c\'est que vous n\'avez probablement pas de vie. Un dernier pour la route ?',
-            'difficutlty' => 5
+            'difficulty' => 5
         ]);
     }
 }
