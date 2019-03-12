@@ -18,7 +18,8 @@ class EnigmaTableSeeder extends Seeder {
             'name' => 'Découverte du BDE',
             'description' => 'Votre BDE souhaite se présenter. Vous devrez allez les voir chacun à leur tour. Qui sont-ils ?<br>' .
                 'Pour chaque étape, vous devez entrer le nom de la personne à deviner, et aller la voir pour obtenir l\'énigme suivante.<br>' .
-                'La solution de la dernière étape n\'est pas le nom de la dernière personne à deviner. Elle vous donnera le code à entrer pour valider l\'énigme.',
+                'La solution de la dernière étape n\'est pas le nom de la dernière personne à deviner. Elle vous donnera le code à entrer pour valider l\'énigme.<br><br>' .
+                'De manière générale, sur le site, le code permettant de valider la dernière étape de l\'énigme doit être utilisé pour accéder à l\'énigme suivante.',
             'difficulty' => 1
         ]);
 
@@ -31,7 +32,7 @@ class EnigmaTableSeeder extends Seeder {
         DB::table('enigmas')->insert([
             'name' => 'Coordonnées perdues',
             'description' => 'Nos services d\'informations ont réussi à intercepter un message indiquant l\'emplacement d\'un criminel très recherché. Malheureusement, nous ne savons pas comment exploiter ce message.',
-            'difficulty' => 2
+            'difficulty' => 4
         ]);
 
         DB::table('enigmas')->insert([
@@ -44,6 +45,13 @@ class EnigmaTableSeeder extends Seeder {
             'name' => 'Keygen (Bonus)',
             'description' => 'Et bien si vous êtes arrivé là c\'est que vous n\'avez probablement pas de vie. Un dernier pour la route ?',
             'difficulty' => 5
+        ]);
+
+        DB::table('enigmas')->insert([
+            'name' => 'Énigmes',
+            'description' => 'Je vous mets au défi de répondre à ces six questions durant cette énigme. Bon courage et... bonne chance !<br><br>' .
+                'Vous pouvez débloquer une autre énigme (plus difficile) avec le code <b>Vive les poneys !</b>',
+            'difficulty' => 2
         ]);
     }
 }

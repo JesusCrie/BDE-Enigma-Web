@@ -218,5 +218,54 @@ class EnigmaStepTableSeeder extends Seeder {
             'content' => '!!components.steps.keygen-wtf',
             'answer_pattern' => '/^MQrkjdEQerb1dkIwx$/'
         ]);
+
+        /* 6 questions */
+        DB::table('enigma_steps')->insert([
+            'enigma_id' => 6,
+            'step' => 1,
+            'name' => 'Historique',
+            'content' => '!!components.steps.questions.c',
+            'answer_pattern' => '/^b$/i'
+        ]);
+
+        DB::table('enigma_steps')->insert([
+            'enigma_id' => 6,
+            'step' => 2,
+            'name' => 'Raie-bu',
+            'content' => '!!components.steps.questions.rebus',
+            'answer_pattern' => '/^h[oô]pital$/i'
+        ]);
+
+        DB::table('enigma_steps')->insert([
+            'enigma_id' => 6,
+            'step' => 3,
+            'name' => 'Une nouvelle langue ?',
+            'content' => '!!components.steps.questions.html',
+            'answer_pattern' => '/^css$/i'
+        ]);
+
+        DB::table('enigma_steps')->insert([
+            'enigma_id' => 6,
+            'step' => 4,
+            'name' => 'Question de vocabulaire',
+            'content' => '!!components.steps.questions.voca',
+            'answer_pattern' => '/^(?:un|le)?\s*p[eé]tale$/i'
+        ]);
+
+        DB::table('enigma_steps')->insert([
+            'enigma_id' => 6,
+            'step' => 5,
+            'name' => 'Un peu de littérature',
+            'content' => '!!components.steps.questions.hugo',
+            'answer_pattern' => '/^(?:victor)?\s*hugo$/i'
+        ]);
+
+        DB::table('enigma_steps')->insert([
+            'enigma_id' => 6,
+            'step' => 6,
+            'name' => 'En musique',
+            'content' => '!!components.steps.questions.musique',
+            'answer_pattern' => '/^(?:lampe)?\s*torche$/i'
+        ]);
     }
 }

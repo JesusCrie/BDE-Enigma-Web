@@ -27,8 +27,13 @@ class UnlockerTableSeeder extends Seeder {
         ]);
 
         DB::table('unlockers')->insert([
-            'enigma_id' => 4,
+            'enigma_id' => 5,
             'code' => 'Je suis un chamois'
+        ]);
+
+        DB::table('unlockers')->insert([
+            'enigma_id' => 6,
+            'code' => 'VOTEZ BDE DDOS !'
         ]);
     }
 }
