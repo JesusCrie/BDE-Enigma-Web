@@ -1,7 +1,7 @@
 <div class="container-links">
     <a href="{{ route('home') }}" class="container-center-hv btn blue mr-1">
         <i class="material-icons lg:mr-1">home</i>
-        <span class="hidden lg:block">Acceuil</span>
+        <span class="hidden lg:block">Accueil</span>
     </a>
 
     @guest

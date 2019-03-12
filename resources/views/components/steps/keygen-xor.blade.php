@@ -1,4 +1,4 @@
-<p>Et si on changeait de methode ?</p>
+<p>Et si on changeait de méthode ?</p>
 <br>
 <p>Un bonus vous attend peut-&ecirc;tre apr&egrave;s celui-l&agrave;...</p>
 <br>

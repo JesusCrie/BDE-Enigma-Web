@@ -1,4 +1,4 @@
-<p>Vous semblez comprendre rapidement, vous y retrouverez vous dans celui-ci ?</p>
+<p>Vous semblez comprendre rapidement, vous y retrouverez-vous dans celui-ci ?</p>
 <br>
 <p><span class="font-bold">Details:</span>&nbsp;ELF executable, 64-bit</p>
 <br>

@@ -34,7 +34,7 @@ class EnigmaStepTableSeeder extends Seeder {
             'enigma_id' => 1,
             'step' => 3,
             'name' => 'Conclusion',
-            'content' => 'Il semblerait que vous ayait réussi à localiser le fugitif, où est-il ?',
+            'content' => 'Il semblerait que vous ayez réussi à localiser le fugitif, où est-il ?',
             'answer_pattern' => '/^v(?:ictor)?\s*h(?:ugo)?$/i' // victor hugo
         ]);
 
@@ -67,7 +67,7 @@ class EnigmaStepTableSeeder extends Seeder {
         DB::table('enigma_steps')->insert([
             'enigma_id' => 2,
             'step' => 4,
-            'name' => 'Devenons serieux',
+            'name' => 'Devenons sérieux',
             'content' => '!!components.steps.keygen-complex',
             'answer_pattern' => '/^5zEAvD$/'
         ]);

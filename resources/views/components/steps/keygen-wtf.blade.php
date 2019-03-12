@@ -1,4 +1,4 @@
-<p>Le dernier, je n'ai pas eu le courage d'en faire un plus dur. C'est long a faire mine de rien.</p>
+<p>Le dernier, je n'ai pas eu le courage d'en faire un plus dur. C'est long à faire mine de rien.</p>
 <br>
 <p><span class="font-bold">Details:</span>&nbsp;ELF executable, 64-bit</p>
 <br>

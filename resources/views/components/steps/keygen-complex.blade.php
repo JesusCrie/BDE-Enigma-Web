@@ -1,4 +1,4 @@
-<p>J'espere que vous avez aimer l'échauffement, il est temps de complexifier la chose un petit peu.</p>
+<p>J'espère que vous avez aimé l'échauffement, il est temps de complexifier la chose un petit peu.</p>
 <br>
 <p><span class="font-bold">Details:</span>&nbsp;ELF executable, 64-bit</p>
 <br>

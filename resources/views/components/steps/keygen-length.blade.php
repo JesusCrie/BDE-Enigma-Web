@@ -1,4 +1,4 @@
-<p>Il semblerait que l'on vous ait sous-estimé. Pour nous assurer que ce n'était pas que de la chance, voyons comment vous réagissez avec celui-la.</p>
+<p>Il semblerait que l'on vous ait sous-estimé. Pour nous assurer que ce n'était pas que de la chance, voyons comment vous réagissez avec celui-là.</p>
 <br>
 <p><span class="font-bold">Details:</span>&nbsp;ELF executable, 64-bit</p>
 <br>

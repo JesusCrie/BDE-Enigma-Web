@@ -1,7 +1,7 @@
 <p class="description">
     Pour commencer l'étude du message intercepté, nous devrions chercher quelle technologie a été utilisée.
     <br>
-    Voici le message intercepté:
+    Voici le message intercepté :
 </p>
 
 <br>

@@ -16,19 +16,19 @@ class EnigmaTableSeeder extends Seeder {
         // line 767
         DB::table('enigmas')->insert([
             'name' => 'Coordonnées perdues',
-            'description' => 'Nos services d\'informations ont réussi à intercepter un message indiquant l\'emplacement d\'un criminel très recherché. Malheuresement, nous ne savons pas comment exploiter ce message.',
+            'description' => 'Nos services d\'informations ont réussi à intercepter un message indiquant l\'emplacement d\'un criminel très recherché. Malheureusement, nous ne savons pas comment exploiter ce message.',
             'difficulty' => 2
         ]);
 
         DB::table('enigmas')->insert([
             'name' => 'Keygen',
-            'description' => 'On a trouver une petite pile d\'executable vérouillés par un mot de passe, pouvez vous les crackés ?',
+            'description' => 'On a trouvé une petite pile d\'exécutables verrouillés par un mot de passe, pouvez-vous les cracker ?',
             'difficulty' => 5
         ]);
 
         DB::table('enigmas')->insert([
             'name' => 'Keygen (Bonus)',
-            'description' => 'Et bien si vous êtes arrivé la c\'est que vous n\'avez probablement pas de vie. Un dernier pour la route ?',
+            'description' => 'Et bien si vous êtes arrivé là c\'est que vous n\'avez probablement pas de vie. Un dernier pour la route ?',
             'difficulty' => 5
         ]);
     }
