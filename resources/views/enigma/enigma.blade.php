@@ -33,6 +33,12 @@
 
         <br>
 
+        <p class="alert blue">
+            N'hesitez pas &agrave; contacter le responsable de l'&eacute;nigme si vous &ecirc;te bloqu&eacute; !
+        </p>
+
+        <br>
+
         <!-- Description -->
         <p class="description">
             {{ $enigma->description }}
