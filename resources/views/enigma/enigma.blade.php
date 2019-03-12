@@ -41,7 +41,7 @@
 
         <!-- Description -->
         <p class="description">
-            {{ $enigma->description }}
+            {!! $enigma->description !!}
         </p>
 
         <!-- Steps -->

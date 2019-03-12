@@ -16,7 +16,7 @@ class EnigmaTableSeeder extends Seeder {
         // line 767
         DB::table('enigmas')->insert([
             'name' => 'Découverte du BDE',
-            'description' => 'Votre BDE souhaite se présenter. Vous devrez allez les voir chacun à leur tour. Qui sont-ils ?\n<br>' .
+            'description' => 'Votre BDE souhaite se présenter. Vous devrez allez les voir chacun à leur tour. Qui sont-ils ?<br>' .
                 'Pour chaque étape, vous devez entrer le nom de la personne à deviner, et aller la voir pour obtenir l\'énigme suivante.<br>' .
                 'La solution de la dernière étape n\'est pas le nom de la dernière personne à deviner. Elle vous donnera le code à entrer pour valider l\'énigme.',
             'difficulty' => 1
