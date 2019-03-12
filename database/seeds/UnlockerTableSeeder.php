@@ -13,11 +13,16 @@ class UnlockerTableSeeder extends Seeder {
     public function run() {
         DB::table('unlockers')->insert([
             'enigma_id' => 1,
-            'code' => 'Vive les poneys !'
+            'code' => 'Caramel'
         ]);
 
         DB::table('unlockers')->insert([
             'enigma_id' => 2,
+            'code' => 'Vive les poneys !'
+        ]);
+
+        DB::table('unlockers')->insert([
+            'enigma_id' => 3,
             'code' => 'Je suis un chamois'
         ]);
     }

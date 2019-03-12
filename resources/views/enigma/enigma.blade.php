@@ -34,7 +34,7 @@
         <br>
 
         <p class="alert blue">
-            N'hesitez pas &agrave; contacter le responsable de l'&eacute;nigme si vous &ecirc;te bloqu&eacute; !
+            N'hesitez pas &agrave; contacter le responsable de l'&eacute;nigme si vous &ecirc;tes bloqu&eacute; !
         </p>
 
         <br>

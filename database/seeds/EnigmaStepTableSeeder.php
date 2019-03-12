@@ -11,11 +11,34 @@ class EnigmaStepTableSeeder extends Seeder {
      * @return void
      */
     public function run() {
-
-        /* Lost coordinates */
+        /* BDE messsage */
+        DB::table('enigma_steps')->insert([
+            'enigma_id' => 1,
+            'step' => 1,
+            'name' => 'Premier message',
+            'content' => '!!components.steps.ascii',
+            'answer_pattern' => '/^Petits dejs tous les matins !$/i' // base64
+        ]);
 
         DB::table('enigma_steps')->insert([
             'enigma_id' => 1,
+            'step' => 2,
+            'name' => 'Un message plus compliqué',
+            'content' => '!!components.steps.caesar',
+            'answer_pattern' => '/^SOIREE JEUDI AU METROPOLITAIN !$/i' // base64
+        ]);
+
+        DB::table('enigma_steps')->insert([
+            'enigma_id' => 1,
+            'step' => 3,
+            'name' => 'Le dernier message',
+            'content' => '!!components.steps.ascii-caesar',
+            'answer_pattern' => '/^VOTEZ BDE DDOS !$/i' // base64
+        ]);
+
+        /* Lost coordinates */
+        DB::table('enigma_steps')->insert([
+            'enigma_id' => 2,
             'step' => 1,
             'name' => 'Inspection préliminaire',
             'content' => '!!components.steps.1-1',
@@ -23,7 +46,7 @@ class EnigmaStepTableSeeder extends Seeder {
         ]);
 
         DB::table('enigma_steps')->insert([
-            'enigma_id' => 1,
+            'enigma_id' => 2,
             'step' => 2,
             'name' => 'Recherche',
             'content' => '!!components.steps.1-2',
@@ -31,7 +54,7 @@ class EnigmaStepTableSeeder extends Seeder {
         ]);
 
         DB::table('enigma_steps')->insert([
-            'enigma_id' => 1,
+            'enigma_id' => 2,
             'step' => 3,
             'name' => 'Conclusion',
             'content' => 'Il semblerait que vous ayez réussi à localiser le fugitif, où est-il ?',
@@ -41,7 +64,7 @@ class EnigmaStepTableSeeder extends Seeder {
         /* Keygen */
 
         DB::table('enigma_steps')->insert([
-            'enigma_id' => 2,
+            'enigma_id' => 3,
             'step' => 1,
             'name' => 'Tout en douceur',
             'content' => '!!components.steps.keygen-cmp',
@@ -49,7 +72,7 @@ class EnigmaStepTableSeeder extends Seeder {
         ]);
 
         DB::table('enigma_steps')->insert([
-            'enigma_id' => 2,
+            'enigma_id' => 3,
             'step' => 2,
             'name' => 'Changeons un peu',
             'content' => '!!components.steps.keygen-length',
@@ -57,7 +80,7 @@ class EnigmaStepTableSeeder extends Seeder {
         ]);
 
         DB::table('enigma_steps')->insert([
-            'enigma_id' => 2,
+            'enigma_id' => 3,
             'step' => 3,
             'name' => 'Plus de branchements ?',
             'content' => '!!components.steps.keygen-simple',
@@ -65,7 +88,7 @@ class EnigmaStepTableSeeder extends Seeder {
         ]);
 
         DB::table('enigma_steps')->insert([
-            'enigma_id' => 2,
+            'enigma_id' => 3,
             'step' => 4,
             'name' => 'Devenons sérieux',
             'content' => '!!components.steps.keygen-complex',
@@ -73,7 +96,7 @@ class EnigmaStepTableSeeder extends Seeder {
         ]);
 
         DB::table('enigma_steps')->insert([
-            'enigma_id' => 2,
+            'enigma_id' => 3,
             'step' => 5,
             'name' => 'Un chiffrage ?',
             'content' => '!!components.steps.keygen-xor',
@@ -81,7 +104,7 @@ class EnigmaStepTableSeeder extends Seeder {
         ]);
 
         DB::table('enigma_steps')->insert([
-            'enigma_id' => 3,
+            'enigma_id' => 4,
             'step' => 1,
             'name' => 'Le bonus',
             'content' => '!!components.steps.keygen-wtf',

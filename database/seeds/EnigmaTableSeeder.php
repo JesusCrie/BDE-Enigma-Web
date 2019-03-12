@@ -15,6 +15,12 @@ class EnigmaTableSeeder extends Seeder {
 
         // line 767
         DB::table('enigmas')->insert([
+            'name' => 'Un message du BDE',
+            'description' => 'Votre BDE vous a envoyé plusieurs messages, mais pour que seule votre promo puisse le lire, il a été chiffré. Pourrez-vous le lire ?',
+            'difficulty' => 2
+        ]);
+
+        DB::table('enigmas')->insert([
             'name' => 'Coordonnées perdues',
             'description' => 'Nos services d\'informations ont réussi à intercepter un message indiquant l\'emplacement d\'un criminel très recherché. Malheureusement, nous ne savons pas comment exploiter ce message.',
             'difficulty' => 2
