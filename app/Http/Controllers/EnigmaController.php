@@ -107,7 +107,7 @@ class EnigmaController extends Controller {
 
         } else {
             $errors = new MessageBag();
-            $errors->add('code', 'Code invalide ou d&eacute;j&agrave; &eacute;xpir&eacute; !');
+            $errors->add('code', 'Code invalide ou d&eacute;j&agrave; expir&eacute; !');
 
             return redirect()->route('home')->withInput()->withErrors($errors);
         }
