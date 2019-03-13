@@ -26,7 +26,7 @@
 
         <!-- Copyright -->
         <p class="copyright">
-            &copy 2019 - BDE DDOS. Tous droits reservés.
+            &copy; 2019 - BDE DDOS. Tous droits reservés.
         </p>
 
         <!-- Scripts -->
