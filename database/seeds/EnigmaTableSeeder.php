@@ -49,5 +49,11 @@ class EnigmaTableSeeder extends Seeder {
             'description' => '!!components.enigma.enigma-simple',
             'difficulty' => 2
         ]);
+
+        DB::table('enigmas')->insert([
+            'name' => 'Vu du ciel',
+            'description' => 'On reçois des messages qui ne font aucun sens. Vous pouvez y jeter un oeil ?',
+            'difficulty' => 2
+        ]);
     }
 }

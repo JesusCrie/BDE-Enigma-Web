@@ -130,7 +130,7 @@ class EnigmaStepTableSeeder extends Seeder {
             'step' => 1,
             'name' => 'Premier message',
             'content' => '!!components.steps.ascii',
-            'answer_pattern' => '/^Petits dejs tous les matins(?: !)?$/i'
+            'answer_pattern' => '/^Petits dejs tous les matins !$/i'
         ]);
 
         DB::table('enigma_steps')->insert([
@@ -138,7 +138,7 @@ class EnigmaStepTableSeeder extends Seeder {
             'step' => 2,
             'name' => 'Un message plus compliqué',
             'content' => '!!components.steps.caesar',
-            'answer_pattern' => '/^SOIREE JEUDI AU METROPOLITAIN(?: !)?$/i'
+            'answer_pattern' => '/^SOIREE JEUDI AU METROPOLITAIN !$/i'
         ]);
 
         DB::table('enigma_steps')->insert([
@@ -146,7 +146,7 @@ class EnigmaStepTableSeeder extends Seeder {
             'step' => 3,
             'name' => 'Le dernier message',
             'content' => '!!components.steps.ascii-caesar',
-            'answer_pattern' => '/^VOTEZ BDE DDOS(?: !)?$/i'
+            'answer_pattern' => '/^VOTEZ BDE DDOS !$/i'
         ]);
 
 
@@ -282,6 +282,26 @@ class EnigmaStepTableSeeder extends Seeder {
             'name' => 'En musique',
             'content' => '!!components.steps.questions.musique',
             'answer_pattern' => '/^(?:lampe)?\s*torche$/i'
+        ]);
+
+
+
+        /* Seen from the sky */
+
+        DB::table('enigma_steps')->insert([
+            'enigma_id' => 7,
+            'step' => 1,
+            'name' => 'Un symbole d\'amour',
+            'content' => '!!components.steps.textgps-satan',
+            'answer_pattern' => '/^satan$/i'
+        ]);
+
+        DB::table('enigma_steps')->insert([
+            'enigma_id',
+            'step' => 2,
+            'name' => 'On voit grand',
+            'content' => '!!components.steps.textgps-ddos',
+            'answer_pattern' => '/^ddos$/i'
         ]);
     }
 }
