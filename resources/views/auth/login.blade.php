@@ -7,7 +7,7 @@
 
             <!-- Title -->
             <div class="big-title mb-10 lg:mb20">
-                <h1>Login</h1>
+                <h1>Connexion</h1>
             </div>
 
             <!-- Form -->
@@ -27,13 +27,14 @@
                 <br><br>
 
                 <!-- Password -->
-                <input id="password" type="password" name="password" placeholder="Password"
+                <input id="password" type="password" name="password" placeholder="Mot de Passe"
                        class="input-text {{ $errors->has('password') ? 'red' : 'blue' }}" required>
 
                 @if ($errors->has('password'))
                     <label for="password" class="text-red float-right mt-2">
                         {{ $errors->first('password') }}
                     </label>
+                    <br>
                 @endif
 
                 <br><br>
@@ -41,7 +42,7 @@
                 <!-- Remember me -->
                 <input id="remember" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
                 <label for="remember">
-                    Remember Me
+                    Se souvenir de moi
                 </label>
 
                 <br><br>

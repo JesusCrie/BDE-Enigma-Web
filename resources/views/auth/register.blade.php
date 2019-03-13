@@ -15,13 +15,14 @@
                 @csrf
 
                 <!-- Name -->
-                <input id="name" type="text" name="name" placeholder="Name" value="{{ old('name') }}"
+                <input id="name" type="text" name="name" placeholder="Nom complet" value="{{ old('name') }}"
                        class="input-text {{ $errors->has('name') ? 'red' : 'blue' }}" required autofocus>
 
                 @if ($errors->has('name'))
                     <label for="name" class="text-red float-right mt-2">
                         {{ $errors->first('name') }}
                     </label>
+                    <br>
                 @endif
 
                 <br><br>
@@ -34,12 +35,13 @@
                     <label for="email" class="text-red float-right mt-2">
                         {{ $errors->first('email') }}
                     </label>
+                    <br>
                 @endif
 
                 <br><br>
 
                 <!-- Password -->
-                <input id="password" type="password" name="password" placeholder="Password"
+                <input id="password" type="password" name="password" placeholder="Mot de passe"
                        class="input-text {{ $errors->has('password') ? 'red' : 'blue' }}" required>
 
                 @if ($errors->has('password'))
@@ -51,7 +53,7 @@
                 <br><br>
 
                 <!-- Password Confirmation -->
-                <input id="password-confirm" type="password" name="password_confirmation" placeholder="Confirm password"
+                <input id="password-confirm" type="password" name="password_confirmation" placeholder="Confirmez le mot de passe"
                        class="input-text blue" required>
 
                 <br><br>

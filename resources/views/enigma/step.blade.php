@@ -21,7 +21,7 @@
         @endif
 
         <h2 class="mt-16 text-3xl">
-            Submit Solution
+            Votre r&eacute;ponse ?
         </h2>
 
         <br>
@@ -42,7 +42,7 @@
 
                 <br><br>
 
-                <input type="submit" name="Valider" class="btn blue-dark">
+                <input type="submit" value="Valider" class="btn blue-dark">
             </form>
         @else
             <p class="alert blue">

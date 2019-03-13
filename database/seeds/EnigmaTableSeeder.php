@@ -13,13 +13,9 @@ class EnigmaTableSeeder extends Seeder {
      */
     public function run() {
 
-        // line 767
         DB::table('enigmas')->insert([
             'name' => 'Découverte du BDE',
-            'description' => 'Votre BDE souhaite se présenter. Vous devrez allez les voir chacun à leur tour. Qui sont-ils ?<br>' .
-                'Pour chaque étape, vous devez entrer le nom de la personne à deviner, et aller la voir pour obtenir l\'énigme suivante.<br>' .
-                'La solution de la dernière étape n\'est pas le nom de la dernière personne à deviner. Elle vous donnera le code à entrer pour valider l\'énigme.<br><br>' .
-                'De manière générale, sur le site, le code permettant de valider la dernière étape de l\'énigme doit être utilisé pour accéder à l\'énigme suivante.',
+            'description' => '!!components.enigma.bde-discover',
             'difficulty' => 1
         ]);
 
@@ -29,15 +25,16 @@ class EnigmaTableSeeder extends Seeder {
             'difficulty' => 2
         ]);
 
+        // line 767
         DB::table('enigmas')->insert([
             'name' => 'Coordonnées perdues',
-            'description' => 'Nos services d\'informations ont réussi à intercepter un message indiquant l\'emplacement d\'un criminel très recherché. Malheureusement, nous ne savons pas comment exploiter ce message.',
+            'description' => 'Nous avons intercepté un message aujourd\'hui, il semble contenir des informations interessantes. Malheureusement, nous ne savons pas comment exploiter ce message.',
             'difficulty' => 4
         ]);
 
         DB::table('enigmas')->insert([
             'name' => 'Keygen',
-            'description' => 'On a trouvé une petite pile d\'exécutables verrouillés par un mot de passe, pouvez-vous les cracker ?',
+            'description' => 'On a trouvé une petite pile d\'exécutables verrouillés par un mot de passe, pouvez-vous les crackés ?',
             'difficulty' => 5
         ]);
 
@@ -49,8 +46,7 @@ class EnigmaTableSeeder extends Seeder {
 
         DB::table('enigmas')->insert([
             'name' => 'Énigmes',
-            'description' => 'Je vous mets au défi de répondre à ces six questions durant cette énigme. Bon courage et... bonne chance !<br><br>' .
-                'Vous pouvez débloquer une autre énigme (plus difficile) avec le code <b>Vive les poneys !</b>',
+            'description' => '!!components.enigma.enigma-simple',
             'difficulty' => 2
         ]);
     }

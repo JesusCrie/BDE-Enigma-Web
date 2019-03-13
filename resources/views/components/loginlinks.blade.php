@@ -5,7 +5,7 @@
     </a>
 
     @guest
-        <a href="{{ route('login') }}" class="container-center-hv btn blue mr-1">
+        <a href="{{ route('login') }}" class="container-center-hv btn blue mx-1">
             <i class="material-icons lg:mr-1">exit_to_app</i>
             <span class="hidden lg:block">Connexion</span>
         </a>
@@ -17,7 +17,7 @@
         <a href="{{ route('logout') }}" class="container-center-hv btn red"
            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
             <i class="material-icons lg:mr-1">power_settings_new</i>
-            <span class="hidden lg:block">Logout</span>
+            <span class="hidden lg:block">Deconnexion</span>
         </a>
 
         <form action="{{ route('logout') }}" id="logout-form" method="post" class="hidden">

@@ -4,4 +4,4 @@
 
 <br>
 
-<input class="input-text" type="text" value="WSMVII NIYHM EY QIXVSTSPMXEMR !" />
+<input class="input-text" type="text" value="WSMVII NIYHM EY QIXVSTSPMXEMR !">

@@ -40,9 +40,14 @@
         <br>
 
         <!-- Description -->
-        <p class="description">
-            {!! $enigma->description !!}
-        </p>
+        @if (substr($enigma->description, 0, 2) === '!!')
+            @component(substr($enigma->description, 2), ['enigma', $enigma])
+            @endcomponent
+        @else
+            <p class="description">
+                {{ $enigma->description }}
+            </p>
+        @endif
 
         <!-- Steps -->
         <h2 class="mt-16 lg:mt-32 text-3xl">

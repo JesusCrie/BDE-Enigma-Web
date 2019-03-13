@@ -11,7 +11,9 @@ class EnigmaStepTableSeeder extends Seeder {
      * @return void
      */
     public function run() {
+
         /* Discover your BDE */
+
         DB::table('enigma_steps')->insert([
             'enigma_id' => 1,
             'step' => 1,
@@ -119,13 +121,16 @@ class EnigmaStepTableSeeder extends Seeder {
             'answer_pattern' => '/^bde-12$/i'
         ]);
 
+
+
         /* BDE message */
+
         DB::table('enigma_steps')->insert([
             'enigma_id' => 2,
             'step' => 1,
             'name' => 'Premier message',
             'content' => '!!components.steps.ascii',
-            'answer_pattern' => '/^Petits dejs tous les matins !$/i'
+            'answer_pattern' => '/^Petits dejs tous les matins(?: !)?$/i'
         ]);
 
         DB::table('enigma_steps')->insert([
@@ -133,7 +138,7 @@ class EnigmaStepTableSeeder extends Seeder {
             'step' => 2,
             'name' => 'Un message plus compliqué',
             'content' => '!!components.steps.caesar',
-            'answer_pattern' => '/^SOIREE JEUDI AU METROPOLITAIN !$/i'
+            'answer_pattern' => '/^SOIREE JEUDI AU METROPOLITAIN(?: !)?$/i'
         ]);
 
         DB::table('enigma_steps')->insert([
@@ -141,15 +146,18 @@ class EnigmaStepTableSeeder extends Seeder {
             'step' => 3,
             'name' => 'Le dernier message',
             'content' => '!!components.steps.ascii-caesar',
-            'answer_pattern' => '/^VOTEZ BDE DDOS !$/i'
+            'answer_pattern' => '/^VOTEZ BDE DDOS(?: !)?$/i'
         ]);
 
+
+
         /* Lost coordinates */
+
         DB::table('enigma_steps')->insert([
             'enigma_id' => 3,
             'step' => 1,
             'name' => 'Inspection préliminaire',
-            'content' => '!!components.steps.1-1',
+            'content' => '!!components.steps.coordinates-1',
             'answer_pattern' => '/^b(?:ase)?\s*64$/i' // base64
         ]);
 
@@ -157,17 +165,19 @@ class EnigmaStepTableSeeder extends Seeder {
             'enigma_id' => 3,
             'step' => 2,
             'name' => 'Recherche',
-            'content' => '!!components.steps.1-2',
-            'answer_pattern' => '/^45.188972[0-9]*\s*,?\s*5.724629[0-9]*$/' // coordinates
+            'content' => '!!components.steps.coordinates-2',
+            'answer_pattern' => '/^45.188972[0-9]*\s*,?\s*5.724629[0-9]*$/' // lat,lng
         ]);
 
         DB::table('enigma_steps')->insert([
             'enigma_id' => 3,
             'step' => 3,
             'name' => 'Conclusion',
-            'content' => 'Il semblerait que vous ayez réussi à localiser le fugitif, où est-il ?',
+            'content' => 'Il semblerait que vous ayez réussi ! Quel est cet endroit ?',
             'answer_pattern' => '/^v(?:ictor)?\s*h(?:ugo)?$/i' // victor hugo
         ]);
+
+
 
         /* Keygen */
 
@@ -211,6 +221,9 @@ class EnigmaStepTableSeeder extends Seeder {
             'answer_pattern' => '/^t_est_une_belle_personne_timothee$/'
         ]);
 
+
+        /* Keygen bonus */
+
         DB::table('enigma_steps')->insert([
             'enigma_id' => 5,
             'step' => 1,
@@ -219,7 +232,10 @@ class EnigmaStepTableSeeder extends Seeder {
             'answer_pattern' => '/^MQrkjdEQerb1dkIwx$/'
         ]);
 
+
+
         /* 6 questions */
+
         DB::table('enigma_steps')->insert([
             'enigma_id' => 6,
             'step' => 1,
