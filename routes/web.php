@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('home');
 
+Route::get('/tutorial-re', function () {
+    return view('tutorial-re');
+})->name('tutorial.re');
+
 Route::middleware('auth')->group(function () {
 
     Route::prefix('enigma')->group(function () {

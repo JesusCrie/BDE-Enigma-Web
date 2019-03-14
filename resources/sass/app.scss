@@ -91,5 +91,14 @@
 }
 
 .description {
-    @apply text-lg text-grey-darkest;
+    @apply leading-normal text-lg text-grey-darkest;
+}
+
+.code {
+    @apply rounded-lg px-1 font-mono bg-grey-light text-sm;
+}
+
+.code-block {
+    @extend .code;
+    @apply border-2 border-grey p-3 m-2;
 }

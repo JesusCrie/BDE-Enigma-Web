@@ -34,7 +34,7 @@ class EnigmaTableSeeder extends Seeder {
 
         DB::table('enigmas')->insert([
             'name' => 'Keygen',
-            'description' => 'On a trouvé une petite pile d\'exécutables verrouillés par un mot de passe, pouvez-vous les crackés ?',
+            'description' => '!!components.enigma.keygen',
             'difficulty' => 5
         ]);
 

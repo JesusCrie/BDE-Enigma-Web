@@ -12,4 +12,8 @@
     &.blue {
         @apply border-blue-dark bg-blue-lighter;
     }
+
+    &.green {
+        @apply border-green-dark bg-green-lighter;
+    }
 }
