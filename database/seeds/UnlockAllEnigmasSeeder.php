@@ -16,5 +16,8 @@ class UnlockAllEnigmasSeeder extends Seeder {
             DB::table('enigmas')
                 ->selectRaw('id, 1')
         );
+
+        DB::insert('INSERT INTO progression_enigmas (enigma_step_id, user_id) ' .
+            'SELECT enigma_steps.id, users.id FROM users, enigma_steps');
     }
 }

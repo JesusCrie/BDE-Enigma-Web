@@ -1,4 +1,6 @@
-<p>Nous avons trouvé qu'un des exécutables était particulièrement simple, du coup on vous le donne.</p>
+<p class="description">
+    Nous avons trouvé qu'un des exécutables était particulièrement simple, du coup on vous le donne.
+</p>
 <br>
 <p><span class="font-bold">Details:</span>&nbsp;ELF executable, 64-bit</p>
 <br>

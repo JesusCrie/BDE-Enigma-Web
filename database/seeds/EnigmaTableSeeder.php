@@ -25,11 +25,17 @@ class EnigmaTableSeeder extends Seeder {
             'difficulty' => 2
         ]);
 
+        DB::table('enigmas')->insert([
+            'name' => 'Vu du ciel',
+            'description' => 'On reçois des messages qui ne font aucun sens. Vous pouvez y jeter un oeil ?',
+            'difficulty' => 2
+        ]);
+
         // line 767
         DB::table('enigmas')->insert([
             'name' => 'Coordonnées perdues',
             'description' => 'Nous avons intercepté un message aujourd\'hui, il semble contenir des informations interessantes. Malheureusement, nous ne savons pas comment exploiter ce message.',
-            'difficulty' => 4
+            'difficulty' => 3
         ]);
 
         DB::table('enigmas')->insert([
@@ -51,9 +57,9 @@ class EnigmaTableSeeder extends Seeder {
         ]);
 
         DB::table('enigmas')->insert([
-            'name' => 'Vu du ciel',
-            'description' => 'On reçois des messages qui ne font aucun sens. Vous pouvez y jeter un oeil ?',
-            'difficulty' => 2
+            'name' => 'Alice et Bob',
+            'description' => 'Est-ce que vous savez envoyer et recevoir des messages crypter ? Je vous rassure, tout est ecrit dans le manuel de gpg.',
+            'difficulty' => 3
         ]);
     }
 }

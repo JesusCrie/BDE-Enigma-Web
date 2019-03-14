@@ -11,29 +11,58 @@ class UnlockerTableSeeder extends Seeder {
      * @return void
      */
     public function run() {
+
+        /* Discover your BDE */
+        // Starter
         DB::table('unlockers')->insert([
             'enigma_id' => 1,
-            'code' => 'Enigma start !'
+            'code' => 'Enigma Start'
         ]);
 
+        /* BDE message */
         DB::table('unlockers')->insert([
             'enigma_id' => 2,
             'code' => 'BDE-12'
         ]);
 
+        /* Seen from the sky */
+        // Starter
         DB::table('unlockers')->insert([
             'enigma_id' => 3,
-            'code' => 'Vive les poneys !'
+            'code' => 'La-haut'
         ]);
 
+        /* Lost coordinates */
+        DB::table('unlockers')->insert([
+            'enigma_id' => 4,
+            'code' => 'Kaunas'
+        ]);
+
+        /* Keygen */
+        // Starter
         DB::table('unlockers')->insert([
             'enigma_id' => 5,
-            'code' => 'Je suis un chamois'
+            'code' => 'x86 > 64k'
         ]);
 
+        /* Keygen bonus */
         DB::table('unlockers')->insert([
             'enigma_id' => 6,
+            'code' => 'Timothee'
+        ]);
+
+        /* 6 questions */
+        // Starter
+        DB::table('unlockers')->insert([
+            'enigma_id' => 7,
             'code' => 'VOTEZ BDE DDOS !'
+        ]);
+
+        /* Alice and Bob */
+        // Starter
+        DB::table('unlockers')->insert([
+            'enigma_id' => 8,
+            'code' => ''
         ]);
     }
 }

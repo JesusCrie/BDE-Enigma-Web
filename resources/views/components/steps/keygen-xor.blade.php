@@ -1,6 +1,8 @@
-<p>Et si on changeait de méthode ?</p>
-<br>
-<p>Un bonus vous attend peut-&ecirc;tre apr&egrave;s celui-l&agrave;...</p>
+<p class="description">
+    Et si on changeait de méthode ?
+    <br>
+    Un bonus vous attend peut-&ecirc;tre apr&egrave;s celui-l&agrave;...
+</p>
 <br>
 <p><span class="font-bold">Details:</span>&nbsp;ELF executable, 64-bit</p>
 <br>

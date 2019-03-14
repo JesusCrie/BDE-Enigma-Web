@@ -18,20 +18,23 @@ class EnigmaStepTableSeeder extends Seeder {
         /* BDE message */
         $this->seedMessageBde(2);
 
+        /* Seen from the sky */
+        $this->seedSeenFromTheSky(3);
+
         /* Lost coordinates */
-        $this->seedLostCoordinates(3);
+        $this->seedLostCoordinates(4);
 
         /* Keygen */
-        $this->seedKeygen(4);
+        $this->seedKeygen(5);
 
         /* Keygen bonus */
-        $this->seedKeygenBonus(5);
+        $this->seedKeygenBonus(6);
 
         /* 6 questions */
-        $this->seedSixQuestions(6);
+        $this->seedSixQuestions(7);
 
-        /* Seen from the sky */
-        $this->seedSeenFromTheSky(7);
+        /* Alice and Bob */
+        $this->seedAliceAndBob(8);
     }
 
     private function seedDiscoverBde(int $id) {
@@ -140,7 +143,7 @@ class EnigmaStepTableSeeder extends Seeder {
             'step' => 12,
             'name' => '12. Une année à passer',
             'content' => '!!components.steps.discover_bde.gael',
-            'answer_pattern' => '/^bde-12$/i'
+            'answer_pattern' => '/^BDE-12$/'
         ]);
     }
 
@@ -198,6 +201,33 @@ class EnigmaStepTableSeeder extends Seeder {
         ]);
     }
 
+    private function seedSeenFromTheSky(int $id) {
+
+        DB::table('enigma_steps')->insert([
+            'enigma_id' => $id,
+            'step' => 1,
+            'name' => 'Un symbole d\'amour',
+            'content' => '!!components.steps.textgps-satan',
+            'answer_pattern' => '/^satan$/i'
+        ]);
+
+        DB::table('enigma_steps')->insert([
+            'enigma_id' => $id,
+            'step' => 2,
+            'name' => 'On voit grand',
+            'content' => '!!components.steps.textgps-ddos',
+            'answer_pattern' => '/^ddos$/i'
+        ]);
+
+        DB::table('enigma_steps')->insert([
+            'enigma_id' => $id,
+            'step' => 3,
+            'name' => 'Juste ici',
+            'content' => '!!components.steps.textgps-kaunas',
+            'answer_pattern' => '/^kaunas$/i'
+        ]);
+    }
+
     private function seedKeygen(int $id) {
 
         DB::table('enigma_steps')->insert([
@@ -227,7 +257,7 @@ class EnigmaStepTableSeeder extends Seeder {
         DB::table('enigma_steps')->insert([
             'enigma_id' => $id,
             'step' => 4,
-            'name' => 'Devenons sérieux',
+            'name' => 'Les choses sérieuses',
             'content' => '!!components.steps.keygen-complex',
             'answer_pattern' => '/^5zEAvD$/'
         ]);
@@ -303,22 +333,46 @@ class EnigmaStepTableSeeder extends Seeder {
         ]);
     }
 
-    private function seedSeenFromTheSky(int $id) {
+    private function seedAliceAndBob(int $id) {
 
         DB::table('enigma_steps')->insert([
             'enigma_id' => $id,
             'step' => 1,
-            'name' => 'Un symbole d\'amour',
-            'content' => '!!components.steps.textgps-satan',
-            'answer_pattern' => '/^satan$/i'
+            'name' => 'Prérequis',
+            'content' => '!!components.steps.gpg-intro',
+            'answer_pattern' => '/^root$/'
         ]);
 
         DB::table('enigma_steps')->insert([
             'enigma_id' => $id,
             'step' => 2,
-            'name' => 'On voit grand',
-            'content' => '!!components.steps.textgps-ddos',
-            'answer_pattern' => '/^ddos$/i'
+            'name' => 'Echaufement',
+            'content' => '!!components.steps.gpg-first',
+            'answer_pattern' => '/^gpg_is_cool$/'
         ]);
+
+        DB::table('enigma_steps')->insert([
+            'enigma_id' => $id,
+            'step' => 3,
+            'name' => 'Une recontre étrange',
+            'content' => '!!components.steps.gpg-help',
+            'answer_pattern' => '/^Donnez lui des cookies$/i'
+        ]);
+
+        DB::table('enigma_steps')->insert([
+            'enigma_id' => $id,
+            'step' => 4,
+            'name' => 'Le Cookie',
+            'content' => '!!components.steps.gpg-cookie',
+            'answer_pattern' => '/^257e94111b70b5fc7475fa6c838196d0b871de811dd4253c951858a468cd16ce4aad0ab8c532afa617dd7aa43350e95cbca17af3ca48e544f8d45ffc7c0055f4$/'
+        ]);
+
+        /*DB::table('enigma_steps')->insert([
+            'enigma_id' => $id,
+            'step' => 5,
+            'name' => 'Prologue',
+            'content' => '!!components.steps.gpg-end',
+            'answer_pattern' => ''
+        ]);*/
     }
 }
