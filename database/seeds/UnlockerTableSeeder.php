@@ -42,7 +42,7 @@ class UnlockerTableSeeder extends Seeder {
         // Starter
         DB::table('unlockers')->insert([
             'enigma_id' => 5,
-            'code' => 'x86 > 64k'
+            'code' => 'x86 > 68k'
         ]);
 
         /* Keygen bonus */
@@ -62,7 +62,7 @@ class UnlockerTableSeeder extends Seeder {
         // Starter
         DB::table('unlockers')->insert([
             'enigma_id' => 8,
-            'code' => ''
+            'code' => 'GPG <3'
         ]);
     }
 }

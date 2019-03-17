@@ -9,6 +9,6 @@
 <br>
 
 <div class="alert green">
-    De manière générale, durant les énigmes, la réponse permettant de valider la dernière étape d'une énigme (ou une partie de celle réponse)
+    De manière générale, durant les énigmes, la réponse permettant de valider la dernière étape d'une énigme (ou une partie de cette réponse)
     peut être utilisée pour accéder à une autre énigme. (mais pas obligatoirement)
 </div>

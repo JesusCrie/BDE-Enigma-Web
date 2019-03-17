@@ -4,7 +4,7 @@ namespace Deployer;
 require 'recipe/laravel.php';
 
 // Project name
-set('application', 'my_project');
+set('application', 'bde_enigma_web');
 
 // Project repository
 set('repository', 'git@github.com:JesusCrie/BDE-Enigma-Web.git');

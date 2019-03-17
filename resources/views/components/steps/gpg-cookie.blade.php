@@ -6,7 +6,6 @@
 <br>
 
 <div class="alert orange">
-    Pour envoyer la réponse, hashez la en sha512 (trouvable en ligne).
-    <br>
-    Si vous avez des doutes sur le format de la réponse après plusieurs essais, contactez le responsable de l'enigme.
+    Comme il n'est pas vraiment possible de traiter la réponse sur ce site, envoyez-la au responsable de l'enigme qui
+    vous donnera la réponse à entrer pour valider cette énigme.
 </div>

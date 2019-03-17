@@ -30,6 +30,6 @@
         </p>
 
         <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
+        <!-- No scripts necessary -->
     </body>
 </html>

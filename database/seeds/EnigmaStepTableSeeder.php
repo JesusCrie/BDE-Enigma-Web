@@ -174,6 +174,33 @@ class EnigmaStepTableSeeder extends Seeder {
         ]);
     }
 
+    private function seedSeenFromTheSky(int $id) {
+
+        DB::table('enigma_steps')->insert([
+            'enigma_id' => $id,
+            'step' => 1,
+            'name' => 'Un symbole d\'amour',
+            'content' => '!!components.steps.textgps-satan',
+            'answer_pattern' => '/^(?:pentagramme|satan|enfer)$/i'
+        ]);
+
+        DB::table('enigma_steps')->insert([
+            'enigma_id' => $id,
+            'step' => 2,
+            'name' => 'On voit grand',
+            'content' => '!!components.steps.textgps-ddos',
+            'answer_pattern' => '/^ddos$/i'
+        ]);
+
+        DB::table('enigma_steps')->insert([
+            'enigma_id' => $id,
+            'step' => 3,
+            'name' => 'Juste ici',
+            'content' => '!!components.steps.textgps-kaunas',
+            'answer_pattern' => '/^Kaunas$/'
+        ]);
+    }
+
     private function seedLostCoordinates(int $id) {
 
         DB::table('enigma_steps')->insert([
@@ -198,33 +225,6 @@ class EnigmaStepTableSeeder extends Seeder {
             'name' => 'Conclusion',
             'content' => 'Il semblerait que vous ayez réussi ! Quel est cet endroit ?',
             'answer_pattern' => '/^v(?:ictor)?\s*h(?:ugo)?$/i' // victor hugo
-        ]);
-    }
-
-    private function seedSeenFromTheSky(int $id) {
-
-        DB::table('enigma_steps')->insert([
-            'enigma_id' => $id,
-            'step' => 1,
-            'name' => 'Un symbole d\'amour',
-            'content' => '!!components.steps.textgps-satan',
-            'answer_pattern' => '/^satan$/i'
-        ]);
-
-        DB::table('enigma_steps')->insert([
-            'enigma_id' => $id,
-            'step' => 2,
-            'name' => 'On voit grand',
-            'content' => '!!components.steps.textgps-ddos',
-            'answer_pattern' => '/^ddos$/i'
-        ]);
-
-        DB::table('enigma_steps')->insert([
-            'enigma_id' => $id,
-            'step' => 3,
-            'name' => 'Juste ici',
-            'content' => '!!components.steps.textgps-kaunas',
-            'answer_pattern' => '/^kaunas$/i'
         ]);
     }
 
@@ -364,7 +364,7 @@ class EnigmaStepTableSeeder extends Seeder {
             'step' => 4,
             'name' => 'Le Cookie',
             'content' => '!!components.steps.gpg-cookie',
-            'answer_pattern' => '/^257e94111b70b5fc7475fa6c838196d0b871de811dd4253c951858a468cd16ce4aad0ab8c532afa617dd7aa43350e95cbca17af3ca48e544f8d45ffc7c0055f4$/'
+            'answer_pattern' => '/^Dobby est libre(?:\s*!)?$/i'
         ]);
 
         /*DB::table('enigma_steps')->insert([
