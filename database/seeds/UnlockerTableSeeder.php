@@ -16,7 +16,7 @@ class UnlockerTableSeeder extends Seeder {
         // Starter
         DB::table('unlockers')->insert([
             'enigma_id' => 1,
-            'code' => 'Enigma Start'
+            'code' => 'EnigmaStart'
         ]);
 
         /* BDE message */

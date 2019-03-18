@@ -50,6 +50,9 @@ class EnigmaController extends Controller {
     public function step(int $id, int $step) {
         $enigma = Enigma::findOrFail($id);
 
+        // Check if unlocked or throw 404
+        $enigma->unlocked()->firstOrFail();
+
         try {
             $stepReal = $enigma->step($step)
                 ->firstOrFail();
