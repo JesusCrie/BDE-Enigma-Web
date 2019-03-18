@@ -1,4 +1,3 @@
 <p class="description">
-    Vous avez oublié la dernière énigme ?
-    Retournez voir Antoine, il pourra vous aider.
+    C'est l'autre roux du BDE, celui sans chapeau.
 </p>

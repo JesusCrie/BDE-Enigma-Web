@@ -1,4 +1,3 @@
 <p class="description">
-    Vous avez oublié la dernière énigme ?
-    Retournez voir Dorian, il pourra vous aider.
+    Ses cheveux changent de couleur aussi souvent que son chat change d'humeur.
 </p>

@@ -1,4 +1,3 @@
 <p class="description">
-    Vous avez oublié la dernière énigme ?
-    Retournez voir Lucas, il pourra vous aider.
+    On reconnaît cette personne du BDE grâce à sa voix portante.
 </p>

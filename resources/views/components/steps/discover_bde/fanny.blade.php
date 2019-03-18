@@ -1,4 +1,3 @@
 <p class="description">
-    Vous avez oublié la dernière énigme ?
-    Retournez voir Dimitri, il pourra vous aider.
+    Cette personne est en quête du pouvoir.
 </p>

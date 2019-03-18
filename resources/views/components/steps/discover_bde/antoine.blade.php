@@ -1,4 +1,3 @@
 <p class="description">
-    Vous avez oublié la dernière énigme ?
-    Retournez voir Nils, il pourra vous aider.
+    Ses cheveux sont semblables à ceux du précédent membre, mais avec plus de volume.
 </p>

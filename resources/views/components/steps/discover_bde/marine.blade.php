@@ -1,4 +1,3 @@
 <p class="description">
-    Vous avez oublié la dernière énigme ?
-    Retournez voir Fanny, elle pourra vous aider.
+    Cette personne prend des notes, pour peu qu'il y en ait à prendre.
 </p>

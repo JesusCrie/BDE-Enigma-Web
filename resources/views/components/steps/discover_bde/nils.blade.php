@@ -1,4 +1,3 @@
 <p class="description">
-    Vous avez oublié la dernière énigme ?
-    Retournez voir Thomas, il pourra vous aider.
+    Ses cheveux sont frisés, mais peu volumineux. Qui est-ce ?
 </p>

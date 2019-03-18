@@ -47,7 +47,6 @@ class EnigmaStepTableSeeder extends Seeder {
             'answer_pattern' => '/^thomas$/i'
         ]);
 
-        // Ses cheveux sont frisés, mais peu volumineux
         DB::table('enigma_steps')->insert([
             'enigma_id' => $id,
             'step' => 2,
@@ -56,7 +55,6 @@ class EnigmaStepTableSeeder extends Seeder {
             'answer_pattern' => '/^nils$/i'
         ]);
 
-        // Ses cheveux ressemblent aux miens
         DB::table('enigma_steps')->insert([
             'enigma_id' => $id,
             'step' => 3,
@@ -65,7 +63,6 @@ class EnigmaStepTableSeeder extends Seeder {
             'answer_pattern' => '/^antoine$/i'
         ]);
 
-        // C'est l'autre roux, sans le chapeau
         DB::table('enigma_steps')->insert([
             'enigma_id' => $id,
             'step' => 4,
@@ -74,7 +71,6 @@ class EnigmaStepTableSeeder extends Seeder {
             'answer_pattern' => '/^dimitri$/i'
         ]);
 
-        // TODO: Décrire Fanny
         DB::table('enigma_steps')->insert([
             'enigma_id' => $id,
             'step' => 5,
@@ -83,7 +79,6 @@ class EnigmaStepTableSeeder extends Seeder {
             'answer_pattern' => '/^fanny$/i'
         ]);
 
-        // TODO: Décrire Marine
         DB::table('enigma_steps')->insert([
             'enigma_id' => $id,
             'step' => 6,
@@ -92,7 +87,6 @@ class EnigmaStepTableSeeder extends Seeder {
             'answer_pattern' => '/^marine$/i'
         ]);
 
-        // TODO: Décrire Lucas
         DB::table('enigma_steps')->insert([
             'enigma_id' => $id,
             'step' => 7,
@@ -101,7 +95,6 @@ class EnigmaStepTableSeeder extends Seeder {
             'answer_pattern' => '/^lucas$/i'
         ]);
 
-        // TODO: Décrire Dorian
         DB::table('enigma_steps')->insert([
             'enigma_id' => $id,
             'step' => 8,
@@ -110,7 +103,6 @@ class EnigmaStepTableSeeder extends Seeder {
             'answer_pattern' => '/^dorian$/i'
         ]);
 
-        // Ses cheveux changent de couleur aussi souvent que son chat change d'humeur
         DB::table('enigma_steps')->insert([
             'enigma_id' => $id,
             'step' => 9,
@@ -119,7 +111,6 @@ class EnigmaStepTableSeeder extends Seeder {
             'answer_pattern' => '/^anne$/i'
         ]);
 
-        // TODO: Décrire Noah
         DB::table('enigma_steps')->insert([
             'enigma_id' => $id,
             'step' => 10,
@@ -128,7 +119,6 @@ class EnigmaStepTableSeeder extends Seeder {
             'answer_pattern' => '/^noah$/i'
         ]);
 
-        // TODO: Décrire Romain
         DB::table('enigma_steps')->insert([
             'enigma_id' => $id,
             'step' => 11,
@@ -137,12 +127,19 @@ class EnigmaStepTableSeeder extends Seeder {
             'answer_pattern' => '/^romain$/i'
         ]);
 
-        // Ses cheveux ont une couleur qui rappelle un écran désagréable
         DB::table('enigma_steps')->insert([
             'enigma_id' => $id,
             'step' => 12,
             'name' => '12. Une année à passer',
             'content' => '!!components.steps.discover_bde.gael',
+            'answer_pattern' => '/^ga[ëe]l$/'
+        ]);
+
+        DB::table('enigma_steps')->insert([
+            'enigma_id' => $id,
+            'step' => 13,
+            'name' => '13. La fin d\'une étape.',
+            'content' => '!!components.steps.discover_bde.fin',
             'answer_pattern' => '/^BDE-12$/'
         ]);
     }

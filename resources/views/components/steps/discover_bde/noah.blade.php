@@ -1,4 +1,3 @@
 <p class="description">
-    Vous avez oublié la dernière énigme ?
-    Retournez voir Anne, elle pourra vous aider.
+    C'est le petit robot du BDE.
 </p>
