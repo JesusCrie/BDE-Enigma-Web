@@ -58,8 +58,8 @@ class AnalyticsController extends Controller {
                     'unlocked_by' => $unlockedBy,
                     'participants' => $participants,
                     'winners' => $winners,
-                    'success_rate' => $successRate,
-                    'completion_rate' => $completionRate,
+                    'success_rate' => round($successRate, 2),
+                    'completion_rate' => round($completionRate, 2),
                     'steps' => $steps
                 ];
             });
