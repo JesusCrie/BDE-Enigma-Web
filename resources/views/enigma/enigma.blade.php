@@ -11,7 +11,7 @@
         <p class="separator"></p>
 
         <!-- Statistics -->
-        <div class="flex flex-wrap text-sm">
+        <div class="container-grid text-sm">
             <span class="container-center-v pill green m-1">
                 <i class="material-icons">person</i>&nbsp;
                 <span class="capitalize">Responsable: {{ $owner }}</span>

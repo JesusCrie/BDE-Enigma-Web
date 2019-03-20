@@ -22,6 +22,8 @@ Route::get('/tutorial-re', function () {
 
 Route::middleware('auth')->group(function () {
 
+    Route::get('/analytics', 'AnalyticsController@stats')->name('analytics');
+
     Route::prefix('enigma')->group(function () {
 
         Route::get('/', 'EnigmaController@unlock')->name('enigma.unlock');

@@ -2,7 +2,7 @@
     @apply py-2 px-4 rounded-full border-2 normal-case font-semibold no-underline cursor-pointer tr-c-bc-eio;
 
     &.blue {
-        @apply btn border-blue bg-white text-blue;
+        @apply border-blue bg-white text-blue;
 
         &:hover, &:active {
             @apply bg-blue text-white;
@@ -10,7 +10,7 @@
     }
 
     &.blue-dark {
-        @apply btn border-blue bg-blue text-white;
+        @apply border-blue bg-blue text-white;
 
         &:hover, &:active {
             @apply border-blue-dark bg-blue-dark;
@@ -18,7 +18,7 @@
     }
 
     &.green-dark {
-        @apply btn border-green bg-green text-white;
+        @apply border-green bg-green text-white;
 
         &:hover, &:active {
             @apply border-green-dark bg-green-dark;
@@ -26,7 +26,7 @@
     }
 
     &.red {
-        @apply btn border-red text-red;
+        @apply border-red text-red;
 
         &:hover, &:active {
             @apply bg-red text-white;

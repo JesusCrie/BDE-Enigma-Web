@@ -18,6 +18,14 @@
     }
 }
 
+.container-row-2 {
+    @apply w-full p-2;
+
+    @screen lg {
+        @apply w-1/2;
+    }
+}
+
 .container-home {
     @apply w-5/6 mx-auto my-20;
 

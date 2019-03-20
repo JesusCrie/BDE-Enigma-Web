@@ -29,6 +29,10 @@
         @apply border-orange bg-orange text-white;
     }
 
+    &.orange-outer {
+        @apply border-orange bg-white text-orange;
+    }
+
     &.red {
         @apply border-red bg-red text-white;
     }
