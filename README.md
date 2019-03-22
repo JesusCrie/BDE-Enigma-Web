@@ -1,5 +1,7 @@
 # BDE-Enigma-Web
 
+This website is using the [Laravel Framework 5.8](https://laravel.com/), [TailwindCSS](https://tailwindcss.com/) and more.
+
 Some challenges were generated with tools available [here](https://github.com/JesusCrie/BDE-Enigma).
 
 ## Setup
